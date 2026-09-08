@@ -1,0 +1,238 @@
+.start-production-page {
+  width: 100%;
+}
+
+.start-production-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.start-production-header h1 {
+  margin: 0;
+  color: var(--color-primary);
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.start-production-header p {
+  margin: 6px 0 0;
+  color: var(--color-text-secondary);
+  font-size: 13px;
+}
+
+.secondary-button {
+  padding: 10px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: 7px;
+  background: white;
+  color: var(--color-primary);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.secondary-button:hover {
+  background: var(--color-primary-light);
+}
+
+.production-form-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.form-section-title {
+  padding: 18px 22px;
+  border-bottom: 1px solid var(--color-border-light);
+  color: var(--color-text);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.production-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  padding: 24px;
+}
+
+.production-form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.production-form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.production-form-group label {
+  margin-bottom: 7px;
+  color: var(--color-text);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.production-form-group input,
+.production-form-group select {
+  width: 100%;
+  height: 45px;
+  padding: 0 13px;
+  border: 1px solid var(--color-border);
+  border-radius: 7px;
+  background: white;
+  color: var(--color-text);
+  font-size: 14px;
+  outline: none;
+}
+
+.production-form-group input:focus,
+.production-form-group select:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(29, 114, 184, 0.1);
+}
+
+/* Disabled fields - Reactor Machine and Format No. */
+.production-form-group input:disabled,
+.production-form-group select:disabled {
+  background: #f1f4f7;
+  color: var(--color-text-muted);
+  cursor: not-allowed;
+}
+
+.field-hint {
+  margin-top: 6px;
+  color: var(--color-text-muted);
+  font-size: 11px;
+}
+
+.form-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 72px;
+  padding: 16px 24px;
+  border-top: 1px solid var(--color-border-light);
+  background: #fafbfd;
+}
+
+.form-footer .primary-button {
+  min-width: 110px;
+}
+
+@media (max-width: 700px) {
+  .start-production-header {
+    flex-direction: column;
+  }
+
+  .production-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .production-form-group.full-width {
+    grid-column: auto;
+  }
+}
+
+/* =========================================
+   OPERATOR SEARCH DROPDOWN
+========================================= */
+
+.operator-field-group {
+  position: relative;
+}
+
+.operator-select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.operator-select-wrapper input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.operator-select-wrapper input:disabled {
+  background: #f1f4f7;
+  color: var(--color-text-muted);
+  cursor: not-allowed;
+}
+
+.operator-dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  max-height: 210px;
+  overflow-y: auto;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 7px;
+  box-shadow: var(--shadow-sm);
+  z-index: 100;
+}
+
+.operator-option {
+  display: block;
+  width: 100%;
+  padding: 10px 13px;
+  border: none;
+  border-bottom: 1px solid var(--color-border-light);
+  background: transparent;
+  color: var(--color-text);
+  font-family: inherit;
+  font-size: 13px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.operator-option:last-child {
+  border-bottom: none;
+}
+
+.operator-option:hover {
+  background: var(--color-primary-light);
+}
+
+.operator-no-results {
+  padding: 11px 13px;
+  color: var(--color-text-muted);
+  font-size: 12px;
+  text-align: left;
+}
+
+/* =========================================
+   OPERATOR DROPDOWN SCROLLBAR
+========================================= */
+
+.operator-dropdown::-webkit-scrollbar {
+  width: 6px;
+}
+
+.operator-dropdown::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.operator-dropdown::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 6px;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+  .operator-dropdown {
+    max-height: 180px;
+  }
+
+  .operator-option {
+    padding: 9px 11px;
+    font-size: 12px;
+  }
+}

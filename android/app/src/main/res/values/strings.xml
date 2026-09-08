@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Tadimety Digital Batch Sheet</string>
+    <string name="title_activity_main">Tadimety Digital Batch Sheet</string>
+    <string name="package_name">com.tadimety.batchsheet</string>
+    <string name="custom_url_scheme">com.tadimety.batchsheet</string>
+</resources>

@@ -1,0 +1,762 @@
+/* =========================================================
+   QA REVIEW PAGE
+   ========================================================= */
+
+.qa-review-page {
+  width: 100%;
+  min-height: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+  background: var(--color-background);
+}
+
+
+/* =========================================================
+   PAGE HEADER
+   ========================================================= */
+
+.qa-review-page-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.qa-review-page-header h1 {
+  margin: 0 0 8px;
+  color: #123f68;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.qa-review-page-header p {
+  margin: 0;
+  color: #627895;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   BACK BUTTON
+   ========================================================= */
+
+.qa-back-button {
+  flex-shrink: 0;
+  min-width: 80px;
+  height: 50px;
+  padding: 0 22px;
+  border: 1px solid #d4dfeb;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #123f68;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.qa-back-button:hover {
+  background: #f5f8fb;
+  border-color: #b8c9da;
+}
+
+
+/* =========================================================
+   MAIN FORM CARD
+   ========================================================= */
+
+.qa-form-card {
+  width: 100%;
+  margin-bottom: 22px;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #e0e8f0;
+  border-radius: 14px;
+  box-shadow: 0 5px 16px rgba(21, 56, 91, 0.08);
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   CARD HEADER
+   ========================================================= */
+
+.qa-form-card-header {
+  padding: 22px 28px;
+  border-bottom: 1px solid #e1e8ef;
+}
+
+.qa-form-card-header h2 {
+  margin: 0 0 6px;
+  color: #102f4d;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.qa-form-card-header p {
+  margin: 0;
+  color: #71859d;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   CARD BODY
+   ========================================================= */
+
+.qa-form-card-body {
+  padding: 22px 28px 28px;
+}
+
+
+/* =========================================================
+   BASIC INFORMATION
+   3 COLUMNS
+   ========================================================= */
+
+.qa-info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px 20px;
+}
+
+
+/* =========================================================
+   COMMON FIELD
+   ========================================================= */
+
+.qa-field {
+  min-width: 0;
+}
+
+.qa-field label {
+  display: block;
+  margin-bottom: 8px;
+  color: #617690;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.qa-field input,
+.qa-field textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #d6e1ec;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #102f4d;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.qa-field input {
+  height: 48px;
+  padding: 0 13px;
+}
+
+.qa-field textarea {
+  min-height: 82px;
+  padding: 12px 13px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.qa-field input::placeholder,
+.qa-field textarea::placeholder {
+  color: #9aa9b9;
+}
+
+.qa-field input:focus,
+.qa-field textarea:focus {
+  border-color: #7298bd;
+  box-shadow: 0 0 0 3px rgba(38, 91, 137, 0.08);
+}
+
+.qa-field input[readonly] {
+  background: #f4f7fa;
+  color: #183f63;
+}
+
+
+/* =========================================================
+   SUB HEADING
+   ========================================================= */
+
+.qa-subheading {
+  margin-top: 28px;
+  margin-bottom: 14px;
+  color: #153f66;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   QC PARAMETER SECTION
+   ========================================================= */
+
+.qa-parameter-list {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #e0e7ee;
+  border-radius: 8px;
+}
+
+
+/* =========================================================
+   PARAMETER HEADER
+   ========================================================= */
+
+.qa-parameter-header {
+  display: grid;
+  grid-template-columns:
+    minmax(180px, 1.1fr)
+    minmax(200px, 1.15fr)
+    minmax(180px, 1fr)
+    minmax(180px, 1fr);
+
+  min-width: 760px;
+  background: #f5f8fb;
+  border-bottom: 1px solid #e0e7ee;
+}
+
+.qa-parameter-header > div {
+  min-width: 0;
+  padding: 12px 14px;
+  color: #5e7188;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   PARAMETER ROW
+   ========================================================= */
+
+.qa-parameter-row {
+  display: grid;
+  grid-template-columns:
+    minmax(180px, 1.1fr)
+    minmax(200px, 1.15fr)
+    minmax(180px, 1fr)
+    minmax(180px, 1fr);
+
+  min-width: 760px;
+  align-items: center;
+  border-bottom: 1px solid #e5ebf1;
+}
+
+.qa-parameter-row:last-child {
+  border-bottom: none;
+}
+
+.qa-parameter-name {
+  min-width: 0;
+  padding: 12px 14px;
+  color: #163d60;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.qa-parameter-input {
+  min-width: 0;
+  padding: 9px 10px;
+}
+
+.qa-parameter-input input {
+  width: 100%;
+  height: 38px;
+  box-sizing: border-box;
+  padding: 0 10px;
+  border: 1px solid #d6e1ec;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #183f63;
+  font-family: inherit;
+  font-size: 13px;
+  outline: none;
+}
+
+.qa-parameter-input input::placeholder {
+  color: #9aa9b9;
+}
+
+.qa-parameter-input input:focus {
+  border-color: #7298bd;
+  box-shadow: 0 0 0 3px rgba(38, 91, 137, 0.07);
+}
+
+
+/* =========================================================
+   QC DECISION
+   ========================================================= */
+
+.qa-decision-body {
+  width: 100%;
+  box-sizing: border-box;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(150px, 1.2fr)
+    minmax(0, 1fr)
+    minmax(0, 1fr)
+    minmax(0, 1fr);
+
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 22px 28px;
+}
+
+.qa-decision-label {
+  min-width: 0;
+
+  color: #183d5e;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.qa-radio-option {
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  color: #253f59;
+  font-size: 14px;
+
+  cursor: pointer;
+}
+
+.qa-radio-option input {
+  flex-shrink: 0;
+
+  width: 16px;
+  height: 16px;
+
+  margin: 0;
+
+  accent-color: #17456f;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   QC DECISION REMARKS
+   ========================================================= */
+
+.qa-decision-remarks {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 0 28px 22px;
+}
+
+.qa-decision-remarks .qa-field {
+  width: 100%;
+  min-width: 0;
+}
+
+.qa-decision-remarks .qa-field textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   VERIFICATION & APPROVAL
+   ========================================================= */
+
+.qa-approval-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  padding: 22px 28px 28px;
+}
+
+.qa-approval-box {
+  min-width: 0;
+  padding: 18px;
+  border: 1px solid #dce6ef;
+  border-radius: 9px;
+  background: #ffffff;
+}
+
+.qa-approval-box h3 {
+  margin: 0 0 18px;
+  color: #163d60;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.qa-approval-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px 16px;
+}
+
+.qa-full-width {
+  grid-column: 1 / -1;
+}
+
+
+/* =========================================================
+   ACTION BUTTONS
+   ========================================================= */
+
+.qa-review-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 14px;
+  margin-top: 4px;
+  padding-bottom: 20px;
+}
+
+.qa-cancel-button,
+.qa-submit-button {
+  min-height: 48px;
+  padding: 0 22px;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.qa-cancel-button {
+  border: 1px solid #d6e1eb;
+  background: #ffffff;
+  color: #173e61;
+}
+
+.qa-cancel-button:hover {
+  background: #f5f8fb;
+}
+
+.qa-submit-button {
+  border: 1px solid #123f68;
+  background: #123f68;
+  color: #ffffff;
+}
+
+.qa-submit-button:hover {
+  background: #0e3557;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .qa-review-page {
+    padding: 22px;
+  }
+
+  .qa-info-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .qa-approval-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .qa-decision-body {
+    grid-template-columns:
+      minmax(130px, 1.2fr)
+      minmax(0, 1fr)
+      minmax(0, 1fr)
+      minmax(0, 1fr);
+
+    gap: 16px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .qa-review-page {
+    padding: 18px 14px;
+  }
+
+  .qa-review-page-header {
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 22px;
+  }
+
+  .qa-review-page-header h1 {
+    font-size: 26px;
+  }
+
+  .qa-review-page-header p {
+    font-size: 14px;
+  }
+
+  .qa-back-button {
+    width: 100%;
+    height: 46px;
+  }
+
+  .qa-form-card {
+    border-radius: 11px;
+    margin-bottom: 16px;
+  }
+
+  .qa-form-card-header {
+    padding: 18px;
+  }
+
+  .qa-form-card-body {
+    padding: 18px;
+  }
+
+  .qa-info-grid {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+
+  .qa-parameter-list {
+    margin-right: 0;
+  }
+
+  .qa-decision-body {
+    grid-template-columns: 1fr;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px 18px;
+  }
+
+  .qa-decision-remarks {
+    padding: 0 18px 20px;
+  }
+
+  .qa-approval-grid {
+    padding: 18px;
+  }
+
+  .qa-approval-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .qa-full-width {
+    grid-column: auto;
+  }
+
+  .qa-review-actions {
+    flex-direction: column-reverse;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .qa-cancel-button,
+  .qa-submit-button {
+    width: 100%;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .qa-review-page {
+    padding: 16px 12px;
+  }
+
+  .qa-review-page-header h1 {
+    font-size: 23px;
+  }
+
+  .qa-form-card-header {
+    padding: 16px;
+  }
+
+  .qa-form-card-body {
+    padding: 16px;
+  }
+
+  .qa-decision-body {
+    padding: 18px 16px;
+  }
+
+  .qa-decision-remarks {
+    padding: 0 16px 18px;
+  }
+
+  .qa-approval-grid {
+    padding: 16px;
+  }
+
+  .qa-approval-box {
+    padding: 15px;
+  }
+
+}
+
+
+/* ==================================================
+   CENTERED SUBMIT CONFIRMATION POPUP
+================================================== */
+
+.qa-modal-overlay {
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(15, 23, 42, 0.55);
+
+  z-index: 9999;
+}
+
+.qa-confirm-modal {
+  width: 100%;
+  max-width: 430px;
+
+  background: #ffffff;
+
+  border-radius: 16px;
+
+  padding: 32px;
+
+  text-align: center;
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+
+  animation: qaModalAppear 0.2s ease-out;
+}
+
+.qa-confirm-icon {
+  width: 52px;
+  height: 52px;
+
+  margin: 0 auto 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #fff7ed;
+
+  color: #ea580c;
+
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.qa-confirm-modal h2 {
+  margin: 0 0 10px;
+
+  font-size: 22px;
+
+  font-weight: 700;
+
+  color: #172033;
+}
+
+.qa-confirm-modal p {
+  margin: 0 auto;
+
+  max-width: 340px;
+
+  font-size: 15px;
+
+  line-height: 1.6;
+
+  color: #667085;
+}
+
+.qa-confirm-actions {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  margin-top: 28px;
+}
+
+.qa-confirm-cancel,
+.qa-confirm-submit {
+  min-width: 120px;
+
+  padding: 11px 22px;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.qa-confirm-cancel {
+  background: #ffffff;
+
+  border: 1px solid #d0d5dd;
+
+  color: #344054;
+}
+
+.qa-confirm-cancel:hover {
+  background: #f9fafb;
+}
+
+.qa-confirm-submit {
+  border: none;
+
+  background: #2563eb;
+
+  color: #ffffff;
+}
+
+.qa-confirm-submit:hover {
+  background: #1d4ed8;
+}
+
+@keyframes qaModalAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}

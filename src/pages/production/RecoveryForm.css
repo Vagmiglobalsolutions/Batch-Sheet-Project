@@ -1,0 +1,553 @@
+.recovery-page {
+  width: 100%;
+  padding-bottom: 30px;
+}
+
+.recovery-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.recovery-header h1 {
+  margin: 0;
+  color: var(--color-primary);
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.recovery-header p {
+  margin: 6px 0 0;
+  color: var(--color-text-secondary);
+  font-size: 13px;
+}
+
+.recovery-card {
+  margin-bottom: 18px;
+  overflow: hidden;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.recovery-card-title {
+  padding: 15px 20px;
+  border-bottom: 1px solid var(--color-border-light);
+  color: var(--color-text);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.recovery-card-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.recovery-card-heading h2 {
+  margin: 0;
+  color: var(--color-text);
+  font-size: 15px;
+}
+
+.recovery-card-heading p {
+  margin: 4px 0 0;
+  color: var(--color-text-muted);
+  font-size: 11px;
+}
+
+/* ==================================================
+   PRODUCTION DETAILS
+================================================== */
+
+.recovery-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.recovery-summary-item {
+  min-width: 0;
+  padding: 13px 16px;
+  border-right: 1px solid var(--color-border-light);
+}
+
+.recovery-summary-item:last-child {
+  border-right: none;
+}
+
+.recovery-summary-item span {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--color-text-muted);
+  font-size: 10px;
+}
+
+.recovery-summary-item strong {
+  display: block;
+  overflow: hidden;
+  color: var(--color-text);
+  font-size: 11px;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.recovery-summary-item input {
+  width: 100%;
+  height: 36px;
+  padding: 0 9px;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background: white;
+  color: var(--color-text);
+  font-family: inherit;
+  font-size: 11px;
+  outline: none;
+}
+
+.recovery-summary-item input:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(29, 114, 184, 0.08);
+}
+
+.recovery-summary-item.recovery-lot-item strong {
+  color: #198754;
+}
+
+/* ==================================================
+   RECOVERY TABLE
+================================================== */
+
+.recovery-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.recovery-table {
+  width: 100%;
+  min-width: 900px;
+  border-collapse: collapse;
+}
+
+.recovery-table th,
+.recovery-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--color-border-light);
+  text-align: left;
+  font-size: 11px;
+}
+
+.recovery-table th {
+  background: #f7f9fb;
+  color: var(--color-text-secondary);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.recovery-table td {
+  color: var(--color-text);
+}
+
+.recovery-table th:nth-child(1) {
+  width: 60px;
+}
+
+.recovery-table th:nth-child(2) {
+  width: 32%;
+}
+
+.recovery-table th:nth-child(3) {
+  width: 130px;
+}
+
+.recovery-table th:nth-child(4) {
+  width: 120px;
+}
+
+.recovery-table th:nth-child(5) {
+  width: 180px;
+}
+
+.recovery-table th:nth-child(6) {
+  width: 25%;
+}
+
+.recovery-serial-cell {
+  text-align: center !important;
+  font-weight: 600;
+}
+
+.recovery-activity-cell {
+  font-weight: 500;
+}
+
+.recovery-table input {
+  width: 100%;
+  height: 36px;
+  padding: 0 9px;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background: white;
+  color: var(--color-text);
+  font-family: inherit;
+  font-size: 11px;
+  outline: none;
+}
+
+.recovery-table input:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(29, 114, 184, 0.08);
+}
+
+/* ==================================================
+   RECOVERY RESULT
+================================================== */
+
+.recovery-result-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  padding: 20px;
+}
+
+.recovery-result-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.recovery-result-group label {
+  margin-bottom: 7px;
+  color: var(--color-text);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.recovery-result-group input {
+  width: 100%;
+  height: 42px;
+  padding: 0 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 7px;
+  background: white;
+  color: var(--color-text);
+  font-family: inherit;
+  font-size: 12px;
+  outline: none;
+}
+
+.recovery-result-group input:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(29, 114, 184, 0.08);
+}
+
+/* ==================================================
+   FORM FIELDS
+================================================== */
+
+.recovery-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  padding: 20px;
+}
+
+.recovery-form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.recovery-form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.recovery-form-group label {
+  margin-bottom: 7px;
+  color: var(--color-text);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.recovery-form-group input,
+.recovery-form-group textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 7px;
+  background: white;
+  color: var(--color-text);
+  font-family: inherit;
+  font-size: 12px;
+  outline: none;
+  resize: vertical;
+}
+
+.recovery-form-group input {
+  height: 42px;
+}
+
+.recovery-form-group input:focus,
+.recovery-form-group textarea:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(29, 114, 184, 0.08);
+}
+
+/* ==================================================
+   CHECKED / APPROVED
+================================================== */
+
+.recovery-approval-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.recovery-approval-grid .recovery-card {
+  margin-bottom: 0;
+}
+
+.recovery-approval-info {
+  margin: 0;
+  padding: 12px 20px 0;
+  color: var(--color-text-muted);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.recovery-form-group input:disabled {
+  background: #f5f7f9;
+  color: var(--color-text-muted);
+  cursor: not-allowed;
+}
+
+/* ==================================================
+   BOTTOM ACTIONS
+================================================== */
+
+.recovery-bottom-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding-top: 5px;
+}
+
+.secondary-button {
+  padding: 10px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: 7px;
+  background: white;
+  color: var(--color-primary);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.secondary-button:hover {
+  background: var(--color-primary-light);
+  border-color: var(--color-primary);
+}
+
+.review-submit-button {
+  min-width: 170px;
+  padding: 11px 18px;
+  border: 1px solid var(--color-primary);
+  border-radius: 7px;
+  background: var(--color-primary);
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.review-submit-button:hover {
+  background: var(--color-primary-dark);
+}
+
+/* ==================================================
+   SUBMIT POPUP
+================================================== */
+
+.submit-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(3px);
+}
+
+.submit-modal {
+  width: 100%;
+  max-width: 430px;
+  padding: 32px;
+
+  background: #ffffff;
+  border-radius: 16px;
+
+  text-align: center;
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+}
+
+.submit-modal-icon {
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #fff4e5;
+  color: #d97706;
+
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.submit-modal h2 {
+  margin: 0 0 12px;
+  color: #1f2937;
+  font-size: 22px;
+}
+
+.submit-modal p {
+  margin: 0;
+  color: #4b5563;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.submit-modal-warning {
+  margin-top: 6px !important;
+  color: #b45309 !important;
+  font-size: 14px !important;
+  font-weight: 600;
+}
+
+.submit-modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.submit-cancel-button,
+.submit-confirm-button {
+  min-width: 120px;
+  padding: 11px 22px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.submit-cancel-button {
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  color: #374151;
+}
+
+.submit-cancel-button:hover {
+  background: #f3f4f6;
+}
+
+.submit-confirm-button {
+  border: 1px solid transparent;
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.submit-confirm-button:hover {
+  background: #1d4ed8;
+}
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+
+@media (max-width: 1100px) {
+  .recovery-summary-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .recovery-summary-item:nth-child(3) {
+    border-right: none;
+  }
+
+  .recovery-result-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .recovery-approval-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .recovery-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .recovery-form-group.full-width {
+    grid-column: auto;
+  }
+
+  .recovery-result-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .recovery-header {
+    flex-direction: column;
+  }
+
+  .recovery-summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .recovery-summary-item {
+    border-right: none;
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  .recovery-bottom-actions {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .review-submit-button,
+  .recovery-bottom-actions .secondary-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .submit-modal {
+    padding: 26px 20px;
+  }
+
+  .submit-modal-actions {
+    flex-direction: column-reverse;
+  }
+
+  .submit-cancel-button,
+  .submit-confirm-button {
+    width: 100%;
+  }
+}

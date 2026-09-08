@@ -1,0 +1,675 @@
+.qa-dashboard-page {
+  width: 100%;
+  padding-bottom: 30px;
+}
+
+/* Header */
+
+.qa-dashboard-header {
+  margin-bottom: 22px;
+}
+
+.qa-dashboard-header h1 {
+  margin: 0;
+
+  color: var(--color-primary);
+
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.qa-dashboard-header p {
+  margin: 6px 0 0;
+
+  color: var(--color-text-secondary);
+
+  font-size: 13px;
+}
+
+/* Statistics */
+
+.qa-stat-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 16px;
+
+  margin-bottom: 20px;
+}
+
+.qa-stat-card {
+  padding: 18px 20px;
+
+  background: var(--color-surface);
+
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+
+  box-shadow: var(--shadow-sm);
+}
+
+.qa-stat-label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: var(--color-text-muted);
+
+  font-size: 11px;
+}
+
+.qa-stat-card strong {
+  color: var(--color-primary);
+
+  font-size: 25px;
+  font-weight: 700;
+}
+
+/* Main Section */
+
+.qa-section-card {
+  overflow: hidden;
+
+  background: var(--color-surface);
+
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+
+  box-shadow: var(--shadow-sm);
+}
+
+.qa-section-header {
+  padding: 17px 20px;
+
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.qa-section-header h2 {
+  margin: 0;
+
+  color: var(--color-text);
+
+  font-size: 15px;
+}
+
+.qa-section-header p {
+  margin: 5px 0 0;
+
+  color: var(--color-text-muted);
+
+  font-size: 11px;
+}
+
+/* Review List */
+
+.qa-review-list {
+  width: 100%;
+}
+
+.qa-review-row {
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 17px 20px;
+
+  border-bottom: 1px solid var(--color-border-light);
+
+  transition:
+    background-color 0.15s ease;
+}
+
+.qa-review-row:last-child {
+  border-bottom: none;
+}
+
+.qa-review-row:hover {
+  background: #f8fbfd;
+}
+
+.qa-review-info {
+  flex: 1;
+
+  min-width: 0;
+}
+
+.qa-review-id {
+  color: var(--color-text);
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.qa-review-submitted {
+  margin-top: 5px;
+
+  color: var(--color-text-muted);
+
+  font-size: 10px;
+}
+
+.qa-review-status {
+  flex-shrink: 0;
+}
+
+.qa-status {
+  display: inline-flex;
+
+  align-items: center;
+
+  padding: 6px 10px;
+
+  border-radius: 20px;
+
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.qa-status.pending {
+  background: #fff7e6;
+
+  color: #a15c00;
+}
+
+.qa-open-button {
+  flex-shrink: 0;
+
+  padding: 9px 14px;
+
+  border: 1px solid var(--color-primary);
+  border-radius: 7px;
+
+  background: white;
+
+  color: var(--color-primary);
+
+  font-size: 11px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease,
+    transform 0.15s ease;
+}
+
+.qa-open-button:hover {
+  background: var(--color-primary);
+
+  color: white;
+
+  transform: translateY(-1px);
+}
+
+.qa-open-button:active {
+  transform: scale(0.98);
+}
+
+/* Empty */
+
+.qa-empty-state {
+  padding: 55px 20px;
+
+  text-align: center;
+}
+
+.qa-empty-icon {
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 14px;
+
+  border-radius: 50%;
+
+  background: #e9f7ef;
+
+  color: #198754;
+
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.qa-empty-state h3 {
+  margin: 0;
+
+  color: var(--color-text);
+
+  font-size: 15px;
+}
+
+.qa-empty-state p {
+  margin: 6px 0 0;
+
+  color: var(--color-text-muted);
+
+  font-size: 11px;
+}
+
+/* Modal */
+
+.qa-modal-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 1000;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(10, 35, 58, 0.45);
+
+  animation: qaOverlayIn 0.18s ease-out;
+}
+
+.qa-review-modal {
+  width: min(620px, 100%);
+
+  overflow: hidden;
+
+  background: white;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 20px 55px rgba(0, 0, 0, 0.2);
+
+  animation: qaModalIn 0.2s ease-out;
+}
+
+.qa-modal-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 20px;
+
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.qa-modal-label {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: var(--color-text-muted);
+
+  font-size: 10px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.5px;
+}
+
+.qa-modal-header h2 {
+  margin: 0;
+
+  color: var(--color-primary);
+
+  font-size: 18px;
+}
+
+.qa-close-button {
+  width: 30px;
+  height: 30px;
+
+  border: none;
+
+  border-radius: 6px;
+
+  background: #f4f6f8;
+
+  color: var(--color-text-secondary);
+
+  font-size: 20px;
+
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+.qa-close-button:hover {
+  background: #e9edf1;
+}
+
+/* Review Content */
+
+.qa-review-content {
+  padding: 20px;
+}
+
+.qa-review-status-box {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 13px 15px;
+
+  border: 1px solid #e6d7ae;
+
+  border-radius: 7px;
+
+  background: #fffaf0;
+}
+
+.qa-review-status-box span {
+  color: var(--color-text-muted);
+
+  font-size: 11px;
+}
+
+.qa-review-status-box strong {
+  color: #a15c00;
+
+  font-size: 11px;
+}
+
+.qa-review-placeholder {
+  margin-top: 18px;
+
+  padding: 35px 20px;
+
+  border: 1px dashed var(--color-border);
+
+  border-radius: 8px;
+
+  text-align: center;
+}
+
+.qa-placeholder-icon {
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 13px;
+
+  border-radius: 50%;
+
+  background: var(--color-primary-light);
+
+  color: var(--color-primary);
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.qa-review-placeholder h3 {
+  margin: 0;
+
+  color: var(--color-text);
+
+  font-size: 14px;
+}
+
+.qa-review-placeholder p {
+  margin: 7px 0 0;
+
+  color: var(--color-text-muted);
+
+  font-size: 11px;
+
+  line-height: 1.5;
+}
+
+/* Modal Actions */
+
+.qa-modal-actions {
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 10px;
+
+  padding: 15px 20px;
+
+  border-top: 1px solid var(--color-border-light);
+}
+
+.qa-reject-button,
+.qa-approve-button {
+  min-width: 105px;
+
+  padding: 10px 16px;
+
+  border-radius: 7px;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.15s ease,
+    transform 0.15s ease;
+}
+
+.qa-reject-button {
+  border: 1px solid #d5a3a3;
+
+  background: #fff7f7;
+
+  color: #b42318;
+}
+
+.qa-reject-button:hover {
+  background: #feecec;
+}
+
+.qa-approve-button {
+  border: 1px solid var(--color-primary);
+
+  background: var(--color-primary);
+
+  color: white;
+}
+
+.qa-approve-button:hover {
+  background: var(--color-primary-dark);
+}
+
+.qa-reject-button:active,
+.qa-approve-button:active {
+  transform: scale(0.98);
+}
+
+/* Reject Modal */
+
+.qa-reject-modal {
+  width: min(450px, 100%);
+
+  padding: 28px;
+
+  background: white;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 20px 55px rgba(0, 0, 0, 0.2);
+
+  text-align: center;
+
+  animation: qaModalIn 0.2s ease-out;
+}
+
+.qa-reject-icon {
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 14px;
+
+  border-radius: 50%;
+
+  background: #fff0f0;
+
+  color: #b42318;
+
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.qa-reject-modal h2 {
+  margin: 0;
+
+  color: var(--color-text);
+
+  font-size: 17px;
+}
+
+.qa-reject-modal p {
+  margin: 8px 0 16px;
+
+  color: var(--color-text-muted);
+
+  font-size: 11px;
+}
+
+.qa-reject-modal textarea {
+  width: 100%;
+
+  padding: 11px;
+
+  border: 1px solid var(--color-border);
+  border-radius: 7px;
+
+  color: var(--color-text);
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  outline: none;
+
+  resize: vertical;
+}
+
+.qa-reject-modal textarea:focus {
+  border-color: var(--color-accent);
+
+  box-shadow:
+    0 0 0 3px rgba(29, 114, 184, 0.08);
+}
+
+.qa-reject-actions {
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 10px;
+
+  margin-top: 18px;
+}
+
+.qa-cancel-button,
+.qa-confirm-reject-button {
+  min-width: 100px;
+
+  padding: 10px 15px;
+
+  border-radius: 7px;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.qa-cancel-button {
+  border: 1px solid var(--color-border);
+
+  background: white;
+
+  color: var(--color-text);
+}
+
+.qa-confirm-reject-button {
+  border: 1px solid #b42318;
+
+  background: #b42318;
+
+  color: white;
+}
+
+.qa-cancel-button:hover {
+  background: #f5f7f9;
+}
+
+.qa-confirm-reject-button:hover {
+  background: #991b1b;
+}
+
+/* Animations */
+
+@keyframes qaOverlayIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes qaModalIn {
+  from {
+    opacity: 0;
+
+    transform: translateY(8px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Responsive */
+
+@media (max-width: 700px) {
+  .qa-stat-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .qa-review-row {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+  .qa-open-button {
+    width: 100%;
+  }
+
+  .qa-modal-actions {
+    flex-direction: column-reverse;
+  }
+
+  .qa-reject-button,
+  .qa-approve-button {
+    width: 100%;
+  }
+}

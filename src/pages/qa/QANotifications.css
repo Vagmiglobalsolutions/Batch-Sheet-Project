@@ -1,0 +1,346 @@
+/* =========================================
+   QA NOTIFICATIONS
+========================================= */
+
+.qa-notifications-page {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   PAGE HEADER
+========================================= */
+
+.qa-notifications-page-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 24px;
+
+  margin-bottom: 24px;
+}
+
+.qa-notifications-page-header h1 {
+  margin: 0;
+
+  color: var(--color-primary);
+
+  font-size: 28px;
+  line-height: 1.2;
+
+  font-weight: 700;
+}
+
+.qa-notifications-page-header p {
+  margin: 7px 0 0;
+
+  color: var(--color-text-secondary);
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   NOTIFICATION COUNT
+========================================= */
+
+.qa-notification-count {
+  flex-shrink: 0;
+
+  padding: 8px 14px;
+
+  border-radius: 20px;
+
+  background: #eaf2f8;
+  color: #18558a;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
+/* =========================================
+   NOTIFICATIONS CARD
+========================================= */
+
+.qa-notifications-card {
+  width: 100%;
+
+  background: var(--color-surface);
+
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+
+  box-shadow: var(--shadow-sm);
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   NOTIFICATION ITEM
+========================================= */
+
+.qa-notification-item {
+  display: flex;
+
+  gap: 18px;
+
+  padding: 22px 24px;
+
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.qa-notification-item:last-child {
+  border-bottom: none;
+}
+
+.qa-notification-new-item {
+  background: #fbfdff;
+}
+
+
+/* =========================================
+   NOTIFICATION ICON
+========================================= */
+
+.qa-notification-icon {
+  width: 40px;
+  height: 40px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #eaf2f8;
+  color: #18558a;
+
+  font-size: 18px;
+  font-weight: 700;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.qa-notification-content {
+  flex: 1;
+
+  min-width: 0;
+}
+
+.qa-notification-title-row {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 6px;
+}
+
+.qa-notification-title-row h2 {
+  margin: 0;
+
+  color: var(--color-text);
+
+  font-size: 15px;
+  line-height: 1.4;
+
+  font-weight: 700;
+}
+
+
+/* =========================================
+   NEW BADGE
+========================================= */
+
+.qa-notification-new {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 4px 9px;
+
+  border-radius: 20px;
+
+  background: #e8f7ef;
+  color: #198754;
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+
+/* =========================================
+   MESSAGE
+========================================= */
+
+.qa-notification-message {
+  margin: 0;
+
+  color: var(--color-text-secondary);
+
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   DETAILS
+========================================= */
+
+.qa-notification-details {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 18px;
+
+  margin-top: 9px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 12px;
+}
+
+.qa-notification-details strong {
+  color: var(--color-text);
+
+  font-weight: 600;
+}
+
+
+/* =========================================
+   TIME
+========================================= */
+
+.qa-notification-time {
+  display: block;
+
+  margin-top: 8px;
+
+  color: var(--color-text-muted);
+
+  font-size: 11px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .qa-notifications-page {
+    max-width: none;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .qa-notifications-page {
+    width: 100%;
+  }
+
+  .qa-notifications-page-header {
+    flex-direction: column;
+
+    gap: 14px;
+
+    margin-bottom: 20px;
+  }
+
+  .qa-notifications-page-header h1 {
+    font-size: 23px;
+  }
+
+  .qa-notifications-page-header p {
+    font-size: 13px;
+  }
+
+  .qa-notification-count {
+    align-self: flex-start;
+  }
+
+  .qa-notification-item {
+    gap: 13px;
+
+    padding: 18px 16px;
+  }
+
+  .qa-notification-icon {
+    width: 36px;
+    height: 36px;
+
+    font-size: 17px;
+  }
+
+  .qa-notification-title-row {
+    flex-wrap: wrap;
+
+    gap: 7px;
+  }
+
+  .qa-notification-title-row h2 {
+    font-size: 14px;
+  }
+
+  .qa-notification-message,
+  .qa-notification-details {
+    font-size: 12px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 480px) {
+
+  .qa-notifications-page-header h1 {
+    font-size: 21px;
+  }
+
+  .qa-notification-item {
+    gap: 10px;
+
+    padding: 16px 12px;
+  }
+
+  .qa-notification-icon {
+    width: 34px;
+    height: 34px;
+
+    font-size: 16px;
+  }
+
+  .qa-notification-title-row h2 {
+    font-size: 13px;
+  }
+
+  .qa-notification-message,
+  .qa-notification-details {
+    font-size: 11px;
+  }
+
+  .qa-notification-time {
+    font-size: 10px;
+  }
+
+}

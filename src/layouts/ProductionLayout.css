@@ -1,0 +1,556 @@
+/* =========================================
+   PRODUCTION LAYOUT
+========================================= */
+
+.production-layout {
+  width: 100%;
+  height: 100vh;
+  background: var(--color-background);
+  overflow: hidden;
+}
+
+
+/* =========================================
+   APP HEADER
+========================================= */
+
+.app-header {
+  height: var(--header-height);
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 24px;
+
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+
+  /* FIXED HEADER */
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: 1000;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   HEADER LEFT
+========================================= */
+
+.header-left {
+  display: flex;
+  align-items: center;
+
+  min-width: 0;
+  flex: 1;
+}
+
+
+/* =========================================
+   HEADER BRAND
+========================================= */
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  min-width: 0;
+}
+
+.header-logo {
+  width: 85px;
+  height: 55px;
+
+  object-fit: contain;
+  display: block;
+
+  flex-shrink: 0;
+}
+
+.header-brand-text {
+  min-width: 0;
+}
+
+.header-company {
+  color: #198754;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+.header-system {
+  margin-top: 2px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 11px;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   HEADER USER
+========================================= */
+
+.header-user {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 18px;
+
+  flex-shrink: 0;
+}
+
+.header-user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  min-width: 0;
+}
+
+.header-username {
+  font-size: 13px;
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+.header-role {
+  margin-top: 2px;
+
+  color: var(--color-text-muted);
+
+  font-size: 11px;
+
+  white-space: nowrap;
+}
+
+.header-logout {
+  padding: 8px 15px;
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+
+  background: white;
+  color: var(--color-danger);
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+}
+
+.header-logout:hover {
+  background: #fff5f5;
+}
+
+
+/* =========================================
+   MOBILE MENU BUTTON
+========================================= */
+
+.mobile-menu-button {
+  display: none;
+
+  width: 40px;
+  height: 40px;
+
+  margin-right: 10px;
+  padding: 8px;
+
+  border: 1px solid var(--color-border);
+  border-radius: 7px;
+
+  background: white;
+
+  cursor: pointer;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 4px;
+
+  flex-shrink: 0;
+}
+
+.mobile-menu-button span {
+  display: block;
+
+  width: 20px;
+  height: 2px;
+
+  background: var(--color-primary);
+
+  border-radius: 2px;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+.production-body {
+  display: flex;
+
+  width: 100%;
+
+  /*
+    Header is fixed, so body starts below it.
+  */
+  height: calc(100vh - var(--header-height));
+
+  margin-top: var(--header-height);
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.production-content {
+  flex: 1;
+
+  margin-left: var(--sidebar-width);
+
+  min-width: 0;
+  min-height: 0;
+
+  padding: 28px;
+
+  /*
+    ONLY MAIN CONTENT SCROLLS
+  */
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  box-sizing: border-box;
+
+  /*
+    Smooth scrolling on supported devices
+  */
+  -webkit-overflow-scrolling: touch;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .app-header {
+    padding: 0 18px;
+  }
+
+  .header-logo {
+    width: 72px;
+    height: 48px;
+  }
+
+  .header-company {
+    font-size: 13px;
+  }
+
+  .header-user {
+    gap: 12px;
+  }
+
+  .production-content {
+    padding: 22px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .production-content {
+    margin-left: 0;
+  }
+
+  /* -------------------------
+     HEADER
+  ------------------------- */
+
+  .app-header {
+    height: 64px;
+
+    width: 100%;
+
+    padding: 0 10px;
+
+    gap: 8px;
+  }
+
+  .header-left {
+    min-width: 0;
+    flex: 1;
+  }
+
+  .mobile-menu-button {
+    display: flex;
+  }
+
+  .header-brand {
+    gap: 6px;
+
+    min-width: 0;
+  }
+
+  .header-logo {
+    width: 48px;
+    height: 38px;
+  }
+
+  .header-brand-text {
+    min-width: 0;
+  }
+
+  .header-company {
+    max-width: 125px;
+
+    font-size: 9px;
+    line-height: 1.2;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .header-system {
+    display: none;
+  }
+
+
+  /* -------------------------
+     USER INFORMATION
+  ------------------------- */
+
+  .header-user {
+    display: flex;
+
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 7px;
+
+    flex-shrink: 0;
+
+    min-width: 0;
+  }
+
+  .header-user-info {
+    display: flex;
+
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+
+    min-width: 0;
+
+    max-width: 85px;
+  }
+
+  .header-username {
+    display: block;
+
+    max-width: 85px;
+
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 1.2;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .header-role {
+    display: block;
+
+    margin-top: 2px;
+
+    color: var(--color-text-muted);
+
+    font-size: 8px;
+    line-height: 1.2;
+
+    white-space: nowrap;
+  }
+
+  .header-logout {
+    flex-shrink: 0;
+
+    padding: 6px 8px;
+
+    font-size: 10px;
+    line-height: 1;
+
+    white-space: nowrap;
+  }
+
+
+  /* -------------------------
+     BODY
+  ------------------------- */
+
+  .production-body {
+    height: calc(100vh - 64px);
+
+    margin-top: 64px;
+
+    width: 100%;
+
+    position: relative;
+
+    overflow: hidden;
+  }
+
+
+  /* -------------------------
+     CONTENT
+  ------------------------- */
+
+  .production-content {
+    width: 100%;
+
+    min-width: 0;
+    min-height: 0;
+
+    padding: 18px 14px;
+
+    box-sizing: border-box;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 480px) {
+
+  .app-header {
+    padding: 0 8px;
+
+    gap: 5px;
+  }
+
+  .mobile-menu-button {
+    width: 38px;
+    height: 38px;
+
+    margin-right: 6px;
+  }
+
+  .mobile-menu-button span {
+    width: 18px;
+  }
+
+  .header-logo {
+    width: 44px;
+    height: 36px;
+  }
+
+  .header-brand {
+    gap: 5px;
+  }
+
+  .header-company {
+    max-width: 105px;
+
+    font-size: 8px;
+  }
+
+  .header-user {
+    gap: 5px;
+  }
+
+  .header-user-info {
+    max-width: 75px;
+  }
+
+  .header-username {
+    max-width: 75px;
+
+    font-size: 9px;
+  }
+
+  .header-role {
+    font-size: 7px;
+  }
+
+  .header-logout {
+    padding: 6px 7px;
+
+    font-size: 9px;
+  }
+
+  .production-content {
+    padding: 16px 12px;
+  }
+}
+
+
+/* =========================================
+   VERY SMALL PHONES
+========================================= */
+
+@media (max-width: 380px) {
+
+  .mobile-menu-button {
+    width: 36px;
+    height: 36px;
+
+    margin-right: 4px;
+  }
+
+  .header-company {
+    max-width: 85px;
+  }
+
+  .header-user-info {
+    max-width: 65px;
+  }
+
+  .header-username {
+    max-width: 65px;
+  }
+
+  .header-role {
+    font-size: 7px;
+  }
+
+  .header-logout {
+    padding: 5px 6px;
+
+    font-size: 8px;
+  }
+}

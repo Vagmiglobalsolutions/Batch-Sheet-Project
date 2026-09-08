@@ -1,0 +1,125 @@
+/* =========================================
+   QA LAYOUT
+========================================= */
+
+.qa-layout {
+  width: 100%;
+  height: 100vh;
+
+  background: var(--color-background);
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   QA BODY
+========================================= */
+
+.qa-body {
+  display: flex;
+
+  width: 100%;
+  height: calc(100vh - var(--header-height));
+
+  margin-top: var(--header-height);
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   QA CONTENT
+========================================= */
+
+.qa-content {
+  flex: 1;
+
+  min-width: 0;
+  min-height: 0;
+
+  /*
+    Sidebar is fixed, so leave space for it.
+  */
+  margin-left: var(--sidebar-width);
+
+  padding: 28px;
+
+  /*
+    Only QA content scrolls.
+  */
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  box-sizing: border-box;
+
+  -webkit-overflow-scrolling: touch;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .qa-content {
+    padding: 22px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .qa-body {
+    height: calc(100vh - 64px);
+
+    margin-top: 64px;
+
+    position: relative;
+
+    width: 100%;
+
+    overflow: hidden;
+  }
+
+
+  .qa-content {
+    width: 100%;
+
+    min-width: 0;
+    min-height: 0;
+
+    /*
+      Sidebar becomes an overlay on mobile.
+    */
+    margin-left: 0;
+
+    padding: 18px 14px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    box-sizing: border-box;
+
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 480px) {
+
+  .qa-content {
+    padding: 16px 12px;
+  }
+}
