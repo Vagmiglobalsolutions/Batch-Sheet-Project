@@ -1,95 +1,97 @@
+/* ==========================================================
+   REQUEST EDIT PAGE
+   ========================================================== */
+
 .request-edit-page {
   width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
+  padding: 24px 30px 40px;
+  box-sizing: border-box;
 }
 
-
-/* =========================
+/* ==========================================================
    PAGE HEADER
-========================= */
+   ========================================================== */
 
 .request-edit-header {
   display: flex;
-  justify-content: space-between;
   align-items: flex-start;
-  gap: 24px;
-  margin-bottom: 24px;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 22px;
 }
 
 .request-edit-header h1 {
   margin: 0;
-  color: var(--color-primary);
-  font-size: 28px;
+  color: #143f66;
+  font-size: 24px;
   line-height: 1.2;
   font-weight: 700;
 }
 
 .request-edit-header p {
-  margin: 7px 0 0;
-  color: var(--color-text-secondary);
-  font-size: 14px;
+  margin: 6px 0 0;
+  color: #657995;
+  font-size: 13px;
   line-height: 1.5;
 }
 
 .request-edit-back-button {
-  flex-shrink: 0;
-  border: 1px solid var(--color-border-light);
+  min-width: 75px;
+  height: 38px;
+  padding: 0 15px;
+  border: 1px solid #e0e7ef;
   border-radius: 7px;
-  padding: 10px 18px;
-  background: var(--color-surface);
-  color: var(--color-text);
+  background: #ffffff;
+  color: #143f66;
   font-size: 13px;
   font-weight: 600;
   cursor: pointer;
 }
 
 .request-edit-back-button:hover {
-  background: #f8fafc;
+  background: #f7f9fc;
 }
 
-
-/* =========================
+/* ==========================================================
    INFORMATION CARD
-========================= */
+   ========================================================== */
 
 .request-edit-info-card {
   width: 100%;
-  margin-bottom: 20px;
-  padding: 17px 20px;
+  margin-bottom: 18px;
+  padding: 16px 18px;
   box-sizing: border-box;
-  background: var(--color-surface);
-  border: 1px solid var(--color-border-light);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-sm);
+  background: #ffffff;
+  border: 1px solid #e5ebf2;
+  border-radius: 9px;
+  box-shadow: 0 3px 10px rgba(22, 51, 79, 0.05);
 }
 
 .request-edit-info-title {
-  margin-bottom: 6px;
-  color: var(--color-text);
+  margin-bottom: 5px;
+  color: #101f31;
   font-size: 14px;
   font-weight: 700;
 }
 
 .request-edit-info-card p {
   margin: 0;
-  color: var(--color-text-secondary);
+  color: #637691;
   font-size: 12px;
   line-height: 1.5;
 }
 
-
-/* =========================
+/* ==========================================================
    REQUEST CARD
-========================= */
+   ========================================================== */
 
 .request-edit-card {
   width: 100%;
-  background: var(--color-surface);
-  border: 1px solid var(--color-border-light);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-sm);
   overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #e5ebf2;
+  border-radius: 9px;
+  box-shadow: 0 3px 10px rgba(22, 51, 79, 0.05);
 }
 
 .request-edit-card-header {
@@ -97,37 +99,63 @@
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  padding: 19px 20px;
-  border-bottom: 1px solid var(--color-border-light);
+  padding: 18px 20px;
+  border-bottom: 1px solid #e5ebf2;
 }
 
 .request-edit-card-header h2 {
   margin: 0;
-  color: var(--color-text);
-  font-size: 17px;
+  color: #101f31;
+  font-size: 16px;
   font-weight: 700;
 }
 
 .request-edit-card-header p {
   margin: 5px 0 0;
-  color: var(--color-text-muted);
+  color: #71819a;
   font-size: 12px;
 }
 
-.request-edit-count {
-  flex-shrink: 0;
-  padding: 5px 10px;
-  border-radius: 20px;
-  background: #eaf2f8;
-  color: #18558a;
-  font-size: 11px;
-  font-weight: 600;
+.request-edit-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
+.request-edit-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 30px;
+  padding: 0 11px;
+  border-radius: 18px;
+  background: #edf5fb;
+  color: #155285;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
 
-/* =========================
+.request-edit-new-button {
+  min-height: 36px;
+  padding: 0 14px;
+  border: 0;
+  border-radius: 7px;
+  background: #143f66;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.request-edit-new-button:hover {
+  background: #0e3355;
+}
+
+/* ==========================================================
    TABLE
-========================= */
+   ========================================================== */
 
 .request-edit-table-wrapper {
   width: 100%;
@@ -141,37 +169,28 @@
   border-collapse: collapse;
 }
 
-.request-edit-table th,
-.request-edit-table td {
-  padding: 14px 18px;
-  text-align: left;
-  border-bottom: 1px solid var(--color-border-light);
+.request-edit-table thead th {
+  padding: 13px 18px;
+  background: #f7f9fb;
+  border-bottom: 1px solid #e5ebf2;
+  color: #516782;
   font-size: 12px;
+  font-weight: 600;
+  text-align: left;
   white-space: nowrap;
 }
 
-.request-edit-table th {
-  background: #f8fafc;
-  color: var(--color-text-secondary);
-  font-weight: 600;
-}
-
-.request-edit-table td {
-  color: var(--color-text);
+.request-edit-table tbody td {
+  padding: 14px 18px;
+  border-bottom: 1px solid #e7edf3;
+  color: #17283b;
+  font-size: 12px;
+  vertical-align: middle;
 }
 
 .request-edit-table tbody tr:last-child td {
   border-bottom: none;
 }
-
-.request-edit-table tbody tr:hover {
-  background: #f8fafc;
-}
-
-
-/* =========================
-   PRODUCT
-========================= */
 
 .request-product {
   display: flex;
@@ -180,58 +199,58 @@
 }
 
 .request-product strong {
-  color: var(--color-text);
+  color: #101f31;
   font-size: 12px;
   font-weight: 700;
 }
 
 .request-product span {
-  color: var(--color-text-muted);
+  color: #7890aa;
   font-size: 11px;
 }
 
-
-/* =========================
+/* ==========================================================
    STATUS
-========================= */
+   ========================================================== */
 
 .request-status {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 5px 10px;
-  border-radius: 20px;
+  min-height: 27px;
+  padding: 0 10px;
+  border-radius: 16px;
   font-size: 11px;
   font-weight: 600;
   white-space: nowrap;
 }
 
 .request-status-pending {
-  background: #fff5df;
-  color: #9a6700;
+  background: #fff4df;
+  color: #a46a00;
 }
 
 .request-status-approved {
-  background: #e8f6ef;
-  color: #198754;
+  background: #e8f7ef;
+  color: #16804a;
 }
 
 .request-status-rejected {
-  background: #fff0f0;
-  color: #c62828;
+  background: #fff0f1;
+  color: #d3313c;
 }
 
-
-/* =========================
-   ACTIONS
-========================= */
+/* ==========================================================
+   TABLE ACTIONS
+   ========================================================== */
 
 .edit-batch-button {
-  border: none;
+  min-height: 34px;
+  padding: 0 12px;
+  border: 0;
   border-radius: 7px;
-  padding: 8px 13px;
-  background: var(--color-primary);
-  color: white;
+  background: #143f66;
+  color: #ffffff;
   font-size: 11px;
   font-weight: 600;
   cursor: pointer;
@@ -239,30 +258,358 @@
 }
 
 .edit-batch-button:hover {
-  background: var(--color-primary-dark);
+  background: #0e3355;
 }
 
 .request-action-muted {
-  color: var(--color-text-muted);
+  color: #8493a7;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.request-edit-empty {
+  padding: 42px 20px;
+  color: #7a8ca1;
+  font-size: 12px;
+  text-align: center;
+}
+
+/* ==========================================================
+   NEW REQUEST OVERLAY
+   ========================================================== */
+
+.new-request-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(12, 31, 49, 0.48);
+  box-sizing: border-box;
+}
+
+/* ==========================================================
+   NEW REQUEST MODAL
+   ========================================================== */
+
+.new-request-modal {
+  width: min(650px, 100%);
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 15px 45px rgba(15, 38, 61, 0.22);
+}
+
+.new-request-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 20px 22px 17px;
+  border-bottom: 1px solid #e6ebf1;
+}
+
+.new-request-header h2 {
+  margin: 0;
+  color: #101f31;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.new-request-header p {
+  margin: 6px 0 0;
+  color: #71819a;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.new-request-close {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: #73849a;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.new-request-close:hover {
+  background: #f3f6f9;
+  color: #24384e;
+}
+
+/* ==========================================================
+   NEW REQUEST BODY
+   ========================================================== */
+
+.new-request-body {
+  padding: 20px 22px 22px;
+}
+
+.new-request-field {
+  margin-bottom: 18px;
+}
+
+.new-request-field:last-child {
+  margin-bottom: 0;
+}
+
+.new-request-field label {
+  display: block;
+  margin-bottom: 6px;
+  color: #26394e;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.required-mark {
+  margin-left: 3px;
+  color: #d3313c;
+}
+
+.optional-label {
+  margin-left: 7px;
+  color: #8997a9;
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.new-request-field select,
+.new-request-field textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #d6e0e9;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #17283b;
+  font-family: inherit;
+  font-size: 12px;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.new-request-field select {
+  height: 40px;
+  padding: 0 11px;
+}
+
+.new-request-field textarea {
+  min-height: 100px;
+  padding: 10px 11px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.new-request-field select:focus,
+.new-request-field textarea:focus {
+  border-color: #4175a1;
+  box-shadow: 0 0 0 3px rgba(65, 117, 161, 0.1);
+}
+
+.new-request-input-error {
+  border-color: #d3313c !important;
+}
+
+.new-request-error {
+  display: block;
+  margin-top: 5px;
+  color: #d3313c;
   font-size: 11px;
 }
 
+/* ==========================================================
+   SELECTED RECORD
+   ========================================================== */
 
-/* =========================
-   EMPTY STATE
-========================= */
-
-.request-edit-empty {
-  padding: 45px 20px;
-  text-align: center;
-  color: var(--color-text-muted);
-  font-size: 12px;
+.new-request-record-card {
+  margin: 0 0 18px;
+  padding: 14px 15px;
+  border: 1px solid #dce7f0;
+  border-radius: 8px;
+  background: #f7fafc;
 }
 
+.new-request-record-title {
+  margin-bottom: 11px;
+  color: #153f65;
+  font-size: 12px;
+  font-weight: 700;
+}
 
-/* =========================
-   EDIT BATCH MODAL
-========================= */
+.new-request-record-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 18px;
+}
+
+.new-request-record-grid div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.new-request-record-grid span {
+  color: #7a8ca1;
+  font-size: 10px;
+}
+
+.new-request-record-grid strong {
+  color: #24384e;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* ==========================================================
+   ATTACHMENT
+   ========================================================== */
+
+.new-request-file-box {
+  padding: 10px;
+  border: 1px dashed #cbd8e5;
+  border-radius: 7px;
+  background: #f9fbfd;
+}
+
+.new-request-file-box input {
+  width: 100%;
+  color: #53677e;
+  font-family: inherit;
+  font-size: 11px;
+}
+
+.new-request-file-selected {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 8px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  background: #f0f5f9;
+}
+
+.new-request-file-selected span {
+  overflow: hidden;
+  color: #43586f;
+  font-size: 11px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.new-request-file-selected button {
+  flex-shrink: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #c5313b;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ==========================================================
+   NEW REQUEST ACTIONS
+   ========================================================== */
+
+.new-request-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 9px;
+  padding: 15px 22px 18px;
+  border-top: 1px solid #e6ebf1;
+}
+
+.new-request-cancel,
+.new-request-submit {
+  min-width: 95px;
+  height: 36px;
+  padding: 0 14px;
+  border-radius: 7px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.new-request-cancel {
+  border: 1px solid #d5dfe8;
+  background: #ffffff;
+  color: #43586f;
+}
+
+.new-request-cancel:hover {
+  background: #f7f9fb;
+}
+
+.new-request-submit {
+  border: 1px solid #143f66;
+  background: #143f66;
+  color: #ffffff;
+}
+
+.new-request-submit:hover {
+  background: #0e3355;
+}
+
+.new-request-cancel:disabled,
+.new-request-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ==========================================================
+   CONFIRMATION MODAL
+   ========================================================== */
+
+.new-request-confirm-modal {
+  width: min(440px, 100%);
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 15px 45px rgba(15, 38, 61, 0.24);
+}
+
+.new-request-confirm-content {
+  padding: 23px 24px 20px;
+  text-align: center;
+}
+
+.new-request-confirm-content h2 {
+  margin: 0 0 12px;
+  color: #101f31;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.new-request-confirm-content p {
+  margin: 7px 0;
+  color: #637691;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.new-request-confirm-content strong {
+  color: #183e60;
+}
+
+.new-request-confirm-actions {
+  display: flex;
+  justify-content: center;
+  gap: 9px;
+  padding: 15px 20px 19px;
+  border-top: 1px solid #e6ebf1;
+}
+
+/* ==========================================================
+   EXISTING EDIT BATCH SHEET
+   ========================================================== */
 
 .edit-batch-overlay {
   position: fixed;
@@ -272,90 +619,68 @@
   align-items: center;
   justify-content: center;
   padding: 20px;
+  background: rgba(12, 31, 49, 0.48);
   box-sizing: border-box;
-  background: rgba(0, 0, 0, 0.42);
 }
 
 .edit-batch-modal {
-  width: 100%;
-  max-width: 760px;
-  max-height: 90vh;
+  width: min(700px, 100%);
+  max-height: calc(100vh - 40px);
   overflow-y: auto;
-  padding: 24px;
-  box-sizing: border-box;
-  background: var(--color-surface);
+  background: #ffffff;
   border-radius: 10px;
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 15px 45px rgba(15, 38, 61, 0.22);
 }
-
-
-/* =========================
-   MODAL HEADER
-========================= */
 
 .edit-batch-header {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 20px;
-  margin-bottom: 20px;
+  gap: 18px;
+  padding: 20px 22px 17px;
+  border-bottom: 1px solid #e6ebf1;
 }
 
 .edit-batch-header h2 {
   margin: 0;
-  color: var(--color-text);
-  font-size: 19px;
+  color: #101f31;
+  font-size: 18px;
   font-weight: 700;
 }
 
 .edit-batch-header p {
   margin: 6px 0 0;
-  color: var(--color-text-secondary);
+  color: #71819a;
   font-size: 12px;
   line-height: 1.5;
 }
 
 .edit-batch-close {
-  flex-shrink: 0;
-  width: 32px;
-  height: 32px;
-  border: none;
+  width: 30px;
+  height: 30px;
+  border: 0;
   border-radius: 6px;
-  background: #f4f5f7;
-  color: var(--color-text-secondary);
-  font-size: 20px;
-  line-height: 1;
+  background: transparent;
+  color: #73849a;
+  font-size: 22px;
   cursor: pointer;
 }
 
 .edit-batch-close:hover {
-  background: #e9ebee;
+  background: #f3f6f9;
 }
 
-
-/* =========================
-   MODAL SECTIONS
-========================= */
-
 .edit-batch-section {
-  margin-bottom: 18px;
-  padding: 17px;
-  background: #fafbfc;
-  border: 1px solid var(--color-border-light);
-  border-radius: 8px;
+  padding: 19px 22px;
+  border-bottom: 1px solid #e6ebf1;
 }
 
 .edit-batch-section-title {
-  margin-bottom: 14px;
-  color: var(--color-text);
+  margin-bottom: 13px;
+  color: #153f65;
   font-size: 13px;
   font-weight: 700;
 }
-
-
-/* =========================
-   FORM GRID
-========================= */
 
 .edit-batch-grid {
   display: grid;
@@ -363,14 +688,10 @@
   gap: 14px;
 }
 
-.edit-batch-field {
-  min-width: 0;
-}
-
 .edit-batch-field label {
   display: block;
   margin-bottom: 6px;
-  color: var(--color-text-secondary);
+  color: #26394e;
   font-size: 11px;
   font-weight: 600;
 }
@@ -379,137 +700,103 @@
 .edit-batch-field textarea {
   width: 100%;
   box-sizing: border-box;
-  border: 1px solid var(--color-border-light);
+  border: 1px solid #d6e0e9;
   border-radius: 7px;
-  padding: 10px 11px;
-  background: var(--color-surface);
-  color: var(--color-text);
+  background: #ffffff;
+  color: #17283b;
   font-family: inherit;
   font-size: 12px;
-  outline: none;
 }
 
 .edit-batch-field input {
   height: 40px;
-}
-
-.edit-batch-field input:focus,
-.edit-batch-field textarea:focus {
-  border-color: var(--color-primary);
-}
-
-.edit-batch-field input[readonly] {
-  background: #f4f5f7;
-  color: var(--color-text-secondary);
+  padding: 0 11px;
 }
 
 .edit-batch-field textarea {
+  padding: 10px 11px;
   resize: vertical;
-  min-height: 80px;
+  line-height: 1.5;
 }
 
-
-/* =========================
-   BATCH FILE
-========================= */
-
 .batch-file-box {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 14px;
-  padding: 12px 14px;
-  background: var(--color-surface);
-  border: 1px solid var(--color-border-light);
+  padding: 11px 13px;
+  border: 1px solid #dce7f0;
   border-radius: 7px;
+  background: #f7fafc;
+}
+
+.batch-file-box div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .batch-file-box strong {
-  display: block;
-  color: var(--color-text);
+  color: #24384e;
   font-size: 12px;
-  font-weight: 600;
 }
 
 .batch-file-box span {
-  display: block;
-  margin-top: 4px;
-  color: var(--color-text-muted);
+  color: #7a8ca1;
   font-size: 10px;
 }
 
-
-/* =========================
-   MODAL ACTIONS
-========================= */
-
 .edit-batch-actions {
   display: flex;
-  align-items: center;
   justify-content: flex-end;
-  gap: 10px;
-  margin-top: 22px;
+  gap: 9px;
+  padding: 15px 22px 18px;
 }
 
 .edit-batch-cancel,
 .edit-batch-submit {
-  min-height: 38px;
-  padding: 9px 17px;
+  min-height: 36px;
+  padding: 0 14px;
   border-radius: 7px;
+  font-family: inherit;
   font-size: 12px;
   font-weight: 600;
   cursor: pointer;
 }
 
 .edit-batch-cancel {
-  border: 1px solid var(--color-border-light);
-  background: var(--color-surface);
-  color: var(--color-text);
-}
-
-.edit-batch-cancel:hover {
-  background: #f8fafc;
+  border: 1px solid #d5dfe8;
+  background: #ffffff;
+  color: #43586f;
 }
 
 .edit-batch-submit {
-  border: none;
-  background: var(--color-primary);
-  color: white;
+  border: 1px solid #143f66;
+  background: #143f66;
+  color: #ffffff;
 }
 
 .edit-batch-submit:hover {
-  background: var(--color-primary-dark);
+  background: #0e3355;
 }
 
-
-/* =========================
-   TABLET
-========================= */
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
 
 @media (max-width: 1100px) {
   .request-edit-page {
-    max-width: none;
-  }
-}
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 768px) {
-  .request-edit-header {
-    flex-direction: column;
-    gap: 14px;
-    margin-bottom: 20px;
+    padding: 24px 24px 38px;
   }
 
   .request-edit-header h1 {
     font-size: 23px;
   }
+}
 
-  .request-edit-header p {
-    font-size: 13px;
+@media (max-width: 800px) {
+  .request-edit-page {
+    padding: 22px 18px 35px;
+  }
+
+  .request-edit-header {
+    flex-direction: column;
   }
 
   .request-edit-back-button {
@@ -517,63 +804,829 @@
   }
 
   .request-edit-card-header {
-    padding: 16px;
+    align-items: flex-start;
+    flex-direction: column;
   }
 
-  .request-edit-card-header h2 {
-    font-size: 15px;
+  .request-edit-header-actions {
+    width: 100%;
+    justify-content: space-between;
   }
 
-  .request-edit-table th,
-  .request-edit-table td {
-    padding: 12px 14px;
-    font-size: 11px;
-  }
-
-  .edit-batch-modal {
-    max-height: 92vh;
-    padding: 18px;
-  }
-
+  .new-request-record-grid,
   .edit-batch-grid {
     grid-template-columns: 1fr;
   }
 }
 
+@media (max-width: 600px) {
+  .request-edit-page {
+    padding: 18px 14px 30px;
+  }
 
-/* =========================
-   SMALL PHONES
-========================= */
-
-@media (max-width: 480px) {
   .request-edit-header h1 {
     font-size: 21px;
   }
 
+  .request-edit-header p {
+    font-size: 12px;
+  }
+
+  .request-edit-info-card {
+    padding: 15px 16px;
+  }
+
   .request-edit-card-header {
-    align-items: flex-start;
+    padding: 16px;
+  }
+
+  .request-edit-header-actions {
+    align-items: stretch;
+    flex-direction: column;
   }
 
   .request-edit-count {
-    padding: 4px 8px;
-    font-size: 9px;
+    align-self: flex-start;
   }
 
+  .request-edit-new-button {
+    width: 100%;
+  }
+
+  .new-request-overlay,
   .edit-batch-overlay {
     padding: 10px;
   }
 
+  .new-request-modal,
   .edit-batch-modal {
-    padding: 15px;
-    border-radius: 8px;
+    max-height: calc(100vh - 20px);
   }
 
+  .new-request-header,
+  .edit-batch-header {
+    padding: 18px 17px 15px;
+  }
+
+  .new-request-body,
+  .edit-batch-section {
+    padding: 18px 17px;
+  }
+
+  .new-request-actions,
+  .edit-batch-actions {
+    padding: 14px 17px 17px;
+  }
+}
+
+@media (max-width: 480px) {
+  .request-edit-header h1 {
+    font-size: 20px;
+  }
+
+  .request-edit-info-title,
+  .request-edit-card-header h2 {
+    font-size: 15px;
+  }
+
+  .new-request-actions,
+  .new-request-confirm-actions,
   .edit-batch-actions {
     flex-direction: column-reverse;
   }
 
+  .new-request-cancel,
+  .new-request-submit,
   .edit-batch-cancel,
   .edit-batch-submit {
     width: 100%;
   }
 }
+
+/* ==========================================================
+   FULL PRODUCTION BATCH EDIT FORM
+   ========================================================== */
+
+.production-full-edit-modal {
+  width: min(1180px, calc(100vw - 32px));
+  max-height: calc(100vh - 32px);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.production-full-edit-modal .edit-batch-header {
+  flex-shrink: 0;
+}
+
+.production-edit-batch-summary {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  padding: 14px 20px;
+  border-bottom: 1px solid #e5eaf0;
+  background: #f8fafc;
+}
+
+.production-edit-batch-summary > div {
+  min-width: 0;
+}
+
+.production-edit-batch-summary span {
+  display: block;
+  margin-bottom: 4px;
+  color: #718096;
+  font-size: 11px;
+}
+
+.production-edit-batch-summary strong {
+  display: block;
+  overflow: hidden;
+  color: #17253a;
+  font-size: 12px;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.production-edit-notice,
+.production-edit-history-note {
+  margin: 12px 20px 0;
+  padding: 10px 12px;
+  border-radius: 7px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.production-edit-notice {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  background: #eef6ff;
+  border: 1px solid #d7e8fa;
+  color: #45627f;
+}
+
+.production-edit-notice strong {
+  color: #173f67;
+}
+
+.production-edit-history-note {
+  background: #f8fafc;
+  border: 1px solid #e5eaf0;
+  color: #68788d;
+}
+
+.production-edit-form-body {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 16px 20px;
+}
+
+.production-edit-stage {
+  margin-bottom: 12px;
+  border: 1px solid #dfe6ee;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.production-edit-stage-header {
+  width: 100%;
+  min-height: 52px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 0;
+  background: #f7f9fb;
+  color: #1c2b40;
+  cursor: pointer;
+  text-align: left;
+}
+
+.production-edit-stage-header:hover {
+  background: #f1f5f9;
+}
+
+.production-edit-stage-header > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.production-edit-stage-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 74px;
+  padding: 4px 7px;
+  border-radius: 5px;
+  background: #eaf1f8;
+  color: #4e6985;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .2px;
+}
+
+.production-edit-stage-header strong {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.production-edit-stage-chevron {
+  font-size: 20px;
+  color: #63758b;
+  line-height: 1;
+}
+
+.production-edit-stage-body {
+  padding: 14px;
+  border-top: 1px solid #e5eaf0;
+}
+
+.production-edit-section {
+  margin-bottom: 14px;
+  border: 1px solid #e3e8ee;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.production-edit-section:last-child {
+  margin-bottom: 0;
+}
+
+.production-edit-section-title {
+  padding: 9px 12px;
+  background: #fafbfc;
+  border-bottom: 1px solid #e6ebf0;
+}
+
+.production-edit-section-title h4 {
+  margin: 0;
+  color: #25364b;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.production-edit-section-title span {
+  display: inline-block;
+  margin-top: 3px;
+  color: #78889b;
+  font-size: 10px;
+}
+
+.production-edit-fields-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 16px;
+  padding: 13px;
+}
+
+.production-edit-field {
+  min-width: 0;
+}
+
+.production-edit-field-wide {
+  grid-column: 1 / -1;
+}
+
+.production-edit-field > label,
+.production-edit-reason-section > label {
+  display: block;
+  margin-bottom: 5px;
+  color: #52657c;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.production-edit-field input,
+.production-edit-field select,
+.production-edit-field textarea,
+.production-edit-reason-section textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px 9px;
+  border: 1px solid #ccd6e0;
+  border-radius: 5px;
+  background: #fff;
+  color: #26364a;
+  font: inherit;
+  font-size: 12px;
+  outline: none;
+}
+
+.production-edit-field input:focus,
+.production-edit-field select:focus,
+.production-edit-field textarea:focus {
+  border-color: #7c9ab8;
+  box-shadow: 0 0 0 2px rgba(80, 120, 160, .08);
+}
+
+.production-edit-radio-group {
+  min-height: 34px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.production-edit-radio-group label,
+.production-edit-checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #4d6077;
+  font-size: 12px;
+}
+
+.production-edit-radio-group input,
+.production-edit-checkbox input {
+  width: auto;
+}
+
+.production-edit-table-scroll {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.production-edit-table {
+  width: 100%;
+  min-width: 680px;
+  border-collapse: collapse;
+}
+
+.production-edit-table th {
+  padding: 8px 9px;
+  border-right: 1px solid #e2e8ef;
+  border-bottom: 1px solid #dfe6ed;
+  background: #f7f9fb;
+  color: #536a83;
+  font-size: 10px;
+  font-weight: 600;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.production-edit-table td {
+  padding: 7px;
+  border-right: 1px solid #e6ebf0;
+  border-bottom: 1px solid #e6ebf0;
+  vertical-align: top;
+}
+
+.production-edit-table td:last-child,
+.production-edit-table th:last-child {
+  border-right: 0;
+}
+
+.production-edit-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.production-edit-table input,
+.production-edit-table select,
+.production-edit-table textarea {
+  width: 100%;
+  min-width: 100px;
+  box-sizing: border-box;
+  padding: 7px;
+  border: 1px solid #ccd6e0;
+  border-radius: 4px;
+  background: #fff;
+  color: #26364a;
+  font-size: 11px;
+  outline: none;
+}
+
+.production-edit-table textarea {
+  min-width: 150px;
+  resize: vertical;
+}
+
+.production-edit-reason-section {
+  padding: 0 20px 14px;
+}
+
+.production-edit-reason-section textarea {
+  background: #f7f9fb;
+  color: #63758a;
+  resize: none;
+}
+
+.production-edit-actions {
+  flex-shrink: 0;
+  background: #fff;
+  border-top: 1px solid #e3e8ee;
+}
+
+.production-edit-empty-form {
+  padding: 35px 20px;
+  border: 1px dashed #cbd5e1;
+  border-radius: 7px;
+  color: #718096;
+  font-size: 12px;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .production-edit-batch-summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .production-full-edit-modal {
+    width: calc(100vw - 18px);
+    max-height: calc(100vh - 18px);
+  }
+
+  .production-edit-batch-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .production-edit-fields-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .production-edit-field-wide {
+    grid-column: auto;
+  }
+
+  .production-edit-form-body {
+    padding: 12px;
+  }
+
+  .production-edit-reason-section {
+    padding: 0 12px 12px;
+  }
+}
+
+/* ==========================================================
+   FULL PRODUCTION BATCH EDIT FORM
+   Add this block to the END of RequestEdit.css.
+   ========================================================== */
+
+.production-full-edit-modal {
+  width: min(1180px, calc(100vw - 32px));
+  max-height: calc(100vh - 32px);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.production-full-edit-modal .edit-batch-header {
+  flex-shrink: 0;
+}
+
+.production-edit-batch-summary {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  padding: 14px 20px;
+  border-bottom: 1px solid #e5eaf0;
+  background: #f8fafc;
+}
+
+.production-edit-batch-summary > div {
+  min-width: 0;
+}
+
+.production-edit-batch-summary span {
+  display: block;
+  margin-bottom: 4px;
+  color: #718096;
+  font-size: 11px;
+}
+
+.production-edit-batch-summary strong {
+  display: block;
+  overflow: hidden;
+  color: #17253a;
+  font-size: 12px;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.production-edit-notice,
+.production-edit-history-note {
+  margin: 12px 20px 0;
+  padding: 10px 12px;
+  border-radius: 7px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.production-edit-notice {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  background: #eef6ff;
+  border: 1px solid #d7e8fa;
+  color: #45627f;
+}
+
+.production-edit-notice strong {
+  color: #173f67;
+}
+
+.production-edit-history-note {
+  background: #f8fafc;
+  border: 1px solid #e5eaf0;
+  color: #68788d;
+}
+
+.production-edit-form-body {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 16px 20px;
+}
+
+.production-edit-stage {
+  margin-bottom: 12px;
+  border: 1px solid #dfe6ee;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.production-edit-stage-header {
+  width: 100%;
+  min-height: 52px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 0;
+  background: #f7f9fb;
+  color: #1c2b40;
+  cursor: pointer;
+  text-align: left;
+}
+
+.production-edit-stage-header:hover {
+  background: #f1f5f9;
+}
+
+.production-edit-stage-header > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.production-edit-stage-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 74px;
+  padding: 4px 7px;
+  border-radius: 5px;
+  background: #eaf1f8;
+  color: #4e6985;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .2px;
+}
+
+.production-edit-stage-header strong {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.production-edit-stage-chevron {
+  font-size: 20px;
+  color: #63758b;
+  line-height: 1;
+}
+
+.production-edit-stage-body {
+  padding: 14px;
+  border-top: 1px solid #e5eaf0;
+}
+
+.production-edit-section {
+  margin-bottom: 14px;
+  border: 1px solid #e3e8ee;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.production-edit-section:last-child {
+  margin-bottom: 0;
+}
+
+.production-edit-section-title {
+  padding: 9px 12px;
+  background: #fafbfc;
+  border-bottom: 1px solid #e6ebf0;
+}
+
+.production-edit-section-title h4 {
+  margin: 0;
+  color: #25364b;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.production-edit-section-title span {
+  display: inline-block;
+  margin-top: 3px;
+  color: #78889b;
+  font-size: 10px;
+}
+
+.production-edit-fields-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 16px;
+  padding: 13px;
+}
+
+.production-edit-field {
+  min-width: 0;
+}
+
+.production-edit-field-wide {
+  grid-column: 1 / -1;
+}
+
+.production-edit-field > label,
+.production-edit-reason-section > label {
+  display: block;
+  margin-bottom: 5px;
+  color: #52657c;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.production-edit-field input,
+.production-edit-field select,
+.production-edit-field textarea,
+.production-edit-reason-section textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px 9px;
+  border: 1px solid #ccd6e0;
+  border-radius: 5px;
+  background: #fff;
+  color: #26364a;
+  font: inherit;
+  font-size: 12px;
+  outline: none;
+}
+
+.production-edit-field input:focus,
+.production-edit-field select:focus,
+.production-edit-field textarea:focus {
+  border-color: #7c9ab8;
+  box-shadow: 0 0 0 2px rgba(80, 120, 160, .08);
+}
+
+.production-edit-radio-group {
+  min-height: 34px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.production-edit-radio-group label,
+.production-edit-checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #4d6077;
+  font-size: 12px;
+}
+
+.production-edit-radio-group input,
+.production-edit-checkbox input {
+  width: auto;
+}
+
+.production-edit-table-scroll {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.production-edit-table {
+  width: 100%;
+  min-width: 680px;
+  border-collapse: collapse;
+}
+
+.production-edit-table th {
+  padding: 8px 9px;
+  border-right: 1px solid #e2e8ef;
+  border-bottom: 1px solid #dfe6ed;
+  background: #f7f9fb;
+  color: #536a83;
+  font-size: 10px;
+  font-weight: 600;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.production-edit-table td {
+  padding: 7px;
+  border-right: 1px solid #e6ebf0;
+  border-bottom: 1px solid #e6ebf0;
+  vertical-align: top;
+}
+
+.production-edit-table td:last-child,
+.production-edit-table th:last-child {
+  border-right: 0;
+}
+
+.production-edit-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.production-edit-table input,
+.production-edit-table select,
+.production-edit-table textarea {
+  width: 100%;
+  min-width: 100px;
+  box-sizing: border-box;
+  padding: 7px;
+  border: 1px solid #ccd6e0;
+  border-radius: 4px;
+  background: #fff;
+  color: #26364a;
+  font-size: 11px;
+  outline: none;
+}
+
+.production-edit-table textarea {
+  min-width: 150px;
+  resize: vertical;
+}
+
+.production-edit-reason-section {
+  padding: 0 20px 14px;
+}
+
+.production-edit-reason-section textarea {
+  background: #f7f9fb;
+  color: #63758a;
+  resize: none;
+}
+
+.production-edit-actions {
+  flex-shrink: 0;
+  background: #fff;
+  border-top: 1px solid #e3e8ee;
+}
+
+.production-edit-empty-form {
+  padding: 35px 20px;
+  border: 1px dashed #cbd5e1;
+  border-radius: 7px;
+  color: #718096;
+  font-size: 12px;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .production-edit-batch-summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .production-full-edit-modal {
+    width: calc(100vw - 18px);
+    max-height: calc(100vh - 18px);
+  }
+
+  .production-edit-batch-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .production-edit-fields-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .production-edit-field-wide {
+    grid-column: auto;
+  }
+
+  .production-edit-form-body {
+    padding: 12px;
+  }
+
+  .production-edit-reason-section {
+    padding: 0 12px 12px;
+  }
+}
+
+/* Updated batch submitted status */
+.request-status-edited_resubmitted {
+  background: #e8f1fb;
+  color: #175a9c;
+}
+

@@ -1,0 +1,635 @@
+/* =========================================
+   TECHNICAL PRODUCTS PAGE
+========================================= */
+
+.technical-products-page {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   PAGE HEADER
+========================================= */
+
+.technical-products-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.technical-products-header h1 {
+  margin: 0;
+  color: var(--color-primary);
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.technical-products-header p {
+  margin: 7px 0 0;
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.technical-products-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.technical-products-back-button {
+  min-height: 40px;
+  padding: 10px 18px;
+  border: 1px solid var(--color-border-light);
+  border-radius: 7px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.technical-products-back-button:hover {
+  background: #f8fafc;
+}
+
+.technical-products-add-button {
+  min-height: 40px;
+  padding: 10px 17px;
+  border: none;
+  border-radius: 7px;
+  background: var(--color-primary);
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition:
+    background 0.15s ease,
+    transform 0.15s ease;
+}
+
+.technical-products-add-button:hover {
+  background: var(--color-primary-dark);
+}
+
+.technical-products-add-button:active {
+  transform: translateY(1px);
+}
+
+
+/* =========================================
+   PRODUCT CARD
+========================================= */
+
+.technical-products-card {
+  width: 100%;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.technical-products-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 19px 20px;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.technical-products-card-header h2 {
+  margin: 0;
+  color: var(--color-text);
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.technical-products-card-header p {
+  margin: 5px 0 0;
+  color: var(--color-text-muted);
+  font-size: 12px;
+}
+
+.technical-products-count {
+  flex-shrink: 0;
+  padding: 5px 10px;
+  border-radius: 20px;
+  background: #eaf2f8;
+  color: #18558a;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+
+/* =========================================
+   TOOLBAR / SEARCH
+========================================= */
+
+.technical-products-toolbar {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.technical-products-search {
+  width: 100%;
+  max-width: 420px;
+}
+
+.technical-products-search label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--color-text-secondary);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.technical-products-search input {
+  width: 100%;
+  height: 40px;
+  box-sizing: border-box;
+  padding: 9px 11px;
+  border: 1px solid var(--color-border-light);
+  border-radius: 7px;
+  outline: none;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-family: inherit;
+  font-size: 12px;
+}
+
+.technical-products-search input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.technical-products-search input:focus {
+  border-color: var(--color-primary);
+}
+
+
+/* =========================================
+   TABLE
+========================================= */
+
+.technical-products-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.technical-products-table {
+  width: 100%;
+  min-width: 700px;
+  border-collapse: collapse;
+}
+
+.technical-products-table th,
+.technical-products-table td {
+  padding: 14px 20px;
+  text-align: left;
+  border-bottom: 1px solid var(--color-border-light);
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.technical-products-table th {
+  background: #f8fafc;
+  color: var(--color-text-secondary);
+  font-weight: 600;
+}
+
+.technical-products-table td {
+  color: var(--color-text);
+}
+
+.technical-products-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.technical-products-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.technical-product-code {
+  color: var(--color-text);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.technical-product-name {
+  color: var(--color-text);
+  font-size: 12px;
+}
+
+
+/* =========================================
+   PRODUCT STATUS
+========================================= */
+
+.technical-product-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.technical-product-status-active {
+  background: #e8f6ef;
+  color: #198754;
+}
+
+.technical-product-status-inactive {
+  background: #f0f1f3;
+  color: #6b7280;
+}
+
+
+/* =========================================
+   EDIT BUTTON
+========================================= */
+
+.technical-product-edit-button {
+  min-height: 32px;
+  padding: 7px 12px;
+  border: 1px solid var(--color-border-light);
+  border-radius: 6px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.technical-product-edit-button:hover {
+  background: #f8fafc;
+}
+
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.technical-products-empty {
+  padding: 45px 20px;
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 12px;
+}
+
+
+/* =========================================
+   MODAL OVERLAY
+========================================= */
+
+.technical-product-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+  box-sizing: border-box;
+
+  background: rgba(0, 0, 0, 0.42);
+}
+
+
+/* =========================================
+   MODAL
+========================================= */
+
+.technical-product-modal {
+  width: 100%;
+  max-width: 500px;
+
+  box-sizing: border-box;
+
+  background: var(--color-surface);
+  border-radius: 10px;
+
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18);
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   MODAL HEADER
+========================================= */
+
+.technical-product-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+
+  padding: 20px;
+
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.technical-product-modal-header h2 {
+  margin: 0;
+  color: var(--color-text);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.technical-product-modal-header p {
+  margin: 5px 0 0;
+  color: var(--color-text-secondary);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.technical-product-modal-close {
+  width: 32px;
+  height: 32px;
+
+  flex-shrink: 0;
+
+  border: none;
+  border-radius: 6px;
+
+  background: #f4f5f7;
+  color: var(--color-text-secondary);
+
+  font-size: 20px;
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+.technical-product-modal-close:hover {
+  background: #e9ebee;
+}
+
+
+/* =========================================
+   MODAL BODY
+========================================= */
+
+.technical-product-modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  padding: 20px;
+}
+
+
+/* =========================================
+   FORM FIELDS
+========================================= */
+
+.technical-product-field {
+  width: 100%;
+}
+
+.technical-product-field label {
+  display: block;
+  margin-bottom: 6px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.technical-product-field input,
+.technical-product-field select {
+  width: 100%;
+  height: 42px;
+
+  box-sizing: border-box;
+
+  padding: 10px 11px;
+
+  border: 1px solid var(--color-border-light);
+  border-radius: 7px;
+
+  outline: none;
+
+  background: var(--color-surface);
+  color: var(--color-text);
+
+  font-family: inherit;
+  font-size: 12px;
+}
+
+.technical-product-field input:focus,
+.technical-product-field select:focus {
+  border-color: var(--color-primary);
+}
+
+.technical-product-field input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.technical-product-field .technical-product-readonly {
+  background: #f4f5f7;
+  color: var(--color-text-secondary);
+  cursor: not-allowed;
+}
+
+.technical-product-field-note {
+  display: block;
+  margin-top: 5px;
+  color: var(--color-text-muted);
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+
+/* =========================================
+   MODAL ACTIONS
+========================================= */
+
+.technical-product-modal-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+
+  padding: 16px 20px;
+
+  border-top: 1px solid var(--color-border-light);
+}
+
+.technical-product-cancel-button,
+.technical-product-save-button {
+  min-height: 38px;
+  padding: 9px 17px;
+
+  border-radius: 7px;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.technical-product-cancel-button {
+  border: 1px solid var(--color-border-light);
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+.technical-product-cancel-button:hover {
+  background: #f8fafc;
+}
+
+.technical-product-save-button {
+  border: none;
+  background: var(--color-primary);
+  color: white;
+}
+
+.technical-product-save-button:hover {
+  background: var(--color-primary-dark);
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .technical-products-page {
+    max-width: none;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+
+  .technical-products-header {
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+
+  .technical-products-header h1 {
+    font-size: 23px;
+  }
+
+  .technical-products-header p {
+    font-size: 13px;
+  }
+
+  .technical-products-header-actions {
+    width: 100%;
+  }
+
+  .technical-products-back-button,
+  .technical-products-add-button {
+    flex: 1;
+  }
+
+  .technical-products-card-header {
+    padding: 16px;
+  }
+
+  .technical-products-card-header h2 {
+    font-size: 15px;
+  }
+
+  .technical-products-toolbar {
+    padding: 16px;
+  }
+
+  .technical-products-table th,
+  .technical-products-table td {
+    padding: 12px 14px;
+    font-size: 11px;
+  }
+
+  .technical-product-modal {
+    max-height: 92vh;
+    overflow-y: auto;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .technical-products-header h1 {
+    font-size: 21px;
+  }
+
+  .technical-products-header-actions {
+    flex-direction: column;
+  }
+
+  .technical-products-back-button,
+  .technical-products-add-button {
+    width: 100%;
+  }
+
+  .technical-products-card {
+    border-radius: 8px;
+  }
+
+  .technical-products-card-header {
+    align-items: flex-start;
+  }
+
+  .technical-products-count {
+    padding: 4px 8px;
+    font-size: 9px;
+  }
+
+  .technical-products-toolbar {
+    padding: 14px;
+  }
+
+  .technical-product-modal-overlay {
+    padding: 10px;
+  }
+
+  .technical-product-modal {
+    border-radius: 8px;
+  }
+
+  .technical-product-modal-header {
+    padding: 16px;
+  }
+
+  .technical-product-modal-body {
+    padding: 16px;
+  }
+
+  .technical-product-modal-actions {
+    flex-direction: column-reverse;
+    padding: 14px 16px;
+  }
+
+  .technical-product-cancel-button,
+  .technical-product-save-button {
+    width: 100%;
+  }
+
+}

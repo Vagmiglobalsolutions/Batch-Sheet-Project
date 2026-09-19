@@ -20,10 +20,6 @@ const productionMenu = [
     path: "/production/active",
   },
   {
-    label: "Drafts",
-    path: "/production/drafts",
-  },
-  {
     label: "Pending QA/QC",
     path: "/production/pending",
   },
@@ -34,6 +30,10 @@ const productionMenu = [
   {
     label: "Completed Productions",
     path: "/production/completed",
+  },
+   {
+    label: "Stock Left",
+    path: "/production/stock-left",
   },
   {
     label: "Request Edit",

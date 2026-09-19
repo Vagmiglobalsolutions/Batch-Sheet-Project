@@ -130,7 +130,7 @@ const ProductionDashboard = () => {
 
         <div className="stat-card">
           <span className="stat-label">
-            Completed Today
+            Completed
           </span>
 
           <strong className="stat-value">

@@ -1,0 +1,366 @@
+.admin-audit-page {
+  width: 100%;
+  min-height: 100%;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.admin-audit-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.admin-audit-header h1 {
+  margin: 0;
+  color: #1f2937;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.admin-audit-header p {
+  margin: 6px 0 0;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+/* =========================================================
+   FILTER CARD
+========================================================= */
+
+.admin-audit-filter-card {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 18px 20px;
+  border: 1px solid #e1e5ea;
+  border-radius: 8px;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+.admin-audit-filter-row {
+  display: grid;
+
+  /*
+    Six controls:
+    Search
+    Product
+    Stage
+    Action
+    Date
+    Clear
+  */
+
+  grid-template-columns:
+    minmax(180px, 1.35fr)
+    minmax(165px, 1.05fr)
+    minmax(125px, 0.8fr)
+    minmax(190px, 1.2fr)
+    minmax(135px, 0.8fr)
+    72px;
+
+  align-items: end;
+  gap: 12px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.admin-audit-field {
+  min-width: 0;
+}
+
+.admin-audit-field label {
+  display: block;
+  margin-bottom: 7px;
+  color: #374151;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.admin-audit-field input,
+.admin-audit-field select {
+  width: 100%;
+  height: 40px;
+  padding: 0 10px;
+  border: 1px solid #cfd6df;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #374151;
+  font-family: inherit;
+  font-size: 12px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.admin-audit-field input::placeholder {
+  color: #9ca3af;
+}
+
+.admin-audit-field input:focus,
+.admin-audit-field select:focus {
+  border-color: #1f4e79;
+  box-shadow: 0 0 0 2px rgba(31, 78, 121, 0.08);
+}
+
+/* =========================================================
+   DATE
+========================================================= */
+
+.admin-audit-date-field input[type="date"] {
+  cursor: pointer;
+}
+
+.admin-audit-date-field input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 0.75;
+}
+
+.admin-audit-date-field input[type="date"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+}
+
+/* =========================================================
+   CLEAR BUTTON
+========================================================= */
+
+.admin-audit-clear-wrapper {
+  width: 100%;
+}
+
+.admin-audit-clear-button {
+  width: 100%;
+  height: 40px;
+  padding: 0 10px;
+  border: 1px solid #1f4e79;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #1f4e79;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.admin-audit-clear-button:hover {
+  background: #f3f7fa;
+}
+
+/* =========================================================
+   TABLE CARD
+========================================================= */
+
+.admin-audit-table-card {
+  width: 100%;
+  border: 1px solid #e1e5ea;
+  border-radius: 8px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.admin-audit-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.admin-audit-table {
+  width: 100%;
+  min-width: 1080px;
+  border-collapse: collapse;
+  table-layout: auto;
+}
+
+.admin-audit-table th {
+  padding: 13px 14px;
+  border-bottom: 1px solid #e5e7eb;
+  background: #f8fafc;
+  color: #374151;
+  font-size: 11px;
+  font-weight: 700;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.admin-audit-table td {
+  padding: 14px;
+  border-bottom: 1px solid #edf0f2;
+  color: #374151;
+  font-size: 12px;
+  vertical-align: middle;
+}
+
+.admin-audit-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.admin-audit-table tbody tr:hover {
+  background: #fafafa;
+}
+
+/* =========================================================
+   PRODUCT
+========================================================= */
+
+.admin-audit-product {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.admin-audit-product strong {
+  color: #1f2937;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.admin-audit-product span {
+  color: #6b7280;
+  font-size: 11px;
+}
+
+/* =========================================================
+   LOT NUMBER
+========================================================= */
+
+.admin-audit-lot {
+  color: #1f4e79;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   ACTION
+========================================================= */
+
+.admin-audit-action {
+  display: inline-flex;
+  align-items: center;
+  max-width: 260px;
+  min-height: 28px;
+  padding: 5px 9px;
+  border-radius: 5px;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.admin-audit-action.submitted {
+  background: #eef4f9;
+  color: #1f4e79;
+}
+
+.admin-audit-action.approved {
+  background: #e8f7ed;
+  color: #247a3d;
+}
+
+.admin-audit-action.rejected {
+  background: #fdeaea;
+  color: #c62828;
+}
+
+/* =========================================================
+   PERFORMED BY
+========================================================= */
+
+.admin-audit-performed-by {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.admin-audit-performed-by strong {
+  color: #1f2937;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.admin-audit-performed-by span {
+  color: #6b7280;
+  font-size: 11px;
+}
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.admin-audit-empty {
+  height: 180px;
+  color: #9ca3af !important;
+  text-align: center !important;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1250px) {
+  .admin-audit-filter-row {
+    grid-template-columns:
+      minmax(180px, 1.3fr)
+      minmax(160px, 1fr)
+      minmax(120px, 0.8fr)
+      minmax(180px, 1.1fr)
+      minmax(130px, 0.8fr)
+      68px;
+
+    gap: 10px;
+  }
+
+  .admin-audit-filter-card {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .admin-audit-filter-row {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .admin-audit-clear-wrapper {
+    width: 100%;
+  }
+
+  .admin-audit-clear-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  .admin-audit-page {
+    padding: 18px;
+  }
+
+  .admin-audit-filter-card {
+    padding: 18px;
+  }
+
+  .admin-audit-filter-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .admin-audit-page {
+    padding: 14px;
+  }
+
+  .admin-audit-filter-card {
+    padding: 16px;
+  }
+
+  .admin-audit-filter-row {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+
+  .admin-audit-clear-button {
+    width: 100%;
+  }
+}

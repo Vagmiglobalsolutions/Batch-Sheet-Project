@@ -1,0 +1,928 @@
+/* ==================================================
+   PAGE
+================================================== */
+
+.technical-stage-page {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* ==================================================
+   HEADER
+================================================== */
+
+.technical-stage-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 22px;
+}
+
+.technical-stage-header h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.technical-stage-header p {
+  margin: 7px 0 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #68717d;
+}
+
+.technical-stage-back-button {
+  border: 1px solid #d8dde5;
+  background: #ffffff;
+  color: #343a40;
+  border-radius: 7px;
+  padding: 9px 17px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: 0.2s ease;
+}
+
+.technical-stage-back-button:hover:not(:disabled) {
+  background: #f5f6f8;
+}
+
+.technical-stage-back-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ==================================================
+   CARD
+================================================== */
+
+.technical-stage-card {
+  background: #ffffff;
+  border: 1px solid #e2e5ea;
+  border-radius: 10px;
+  margin-bottom: 22px;
+  overflow: hidden;
+}
+
+.technical-stage-card-title {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 22px;
+  border-bottom: 1px solid #edf0f3;
+}
+
+.technical-stage-card-title h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.technical-stage-card-title p {
+  margin: 6px 0 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #737b87;
+}
+
+.technical-stage-card-body {
+  padding: 22px;
+}
+
+/* ==================================================
+   PRODUCT FIELD
+================================================== */
+
+.technical-stage-field {
+  width: 100%;
+  max-width: none;
+}
+
+.technical-stage-field label {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #343a40;
+}
+
+.technical-stage-field select {
+  width: 100%;
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid #d7dce2;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #343a40;
+  font-size: 12px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.technical-stage-field select:focus {
+  border-color: #9aa2ad;
+}
+
+.technical-stage-field select:disabled {
+  background: #f5f6f8;
+  cursor: not-allowed;
+}
+
+/* ==================================================
+   SELECTED PRODUCT INFO
+================================================== */
+
+.selected-product-info {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 22px;
+  padding: 17px;
+  border: 1px solid #e4e7eb;
+  border-radius: 8px;
+  background: #fafbfc;
+}
+
+.selected-product-info > div {
+  min-width: 0;
+}
+
+.selected-product-label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 10px;
+  color: #737b87;
+  font-weight: 500;
+}
+
+.selected-product-info strong {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  word-break: break-word;
+}
+
+.configuration-status {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 20px;
+  padding: 5px 10px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.configuration-status.configured {
+  background: #e9f7ef;
+  color: #26734d;
+}
+
+.configuration-status.not-configured {
+  background: #f0f1f3;
+  color: #737982;
+}
+
+/* ==================================================
+   STAGE COUNT
+================================================== */
+
+.stage-count,
+.sequence-info {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 20px;
+  background: #f1f3f5;
+  color: #606873;
+  font-size: 10px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ==================================================
+   STAGE CHECKBOX GRID
+================================================== */
+
+.stage-checkbox-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.stage-checkbox-item {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+
+  min-height: 70px;
+  padding: 13px;
+
+  border: 1px solid #dfe3e8;
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  cursor: pointer;
+  box-sizing: border-box;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.stage-checkbox-item:hover {
+  border-color: #bcc3cc;
+}
+
+.stage-checkbox-item.selected {
+  border-color: #aeb6c0;
+  background: #f8f9fa;
+}
+
+.stage-checkbox-item.mandatory-stage {
+  border-color: #cfd4da;
+  background: #f7f8f9;
+  cursor: default;
+}
+
+.stage-checkbox-item input {
+  width: 15px;
+  height: 15px;
+  margin: 2px 0 0;
+  flex: 0 0 auto;
+  cursor: pointer;
+}
+
+.stage-checkbox-item input:disabled {
+  cursor: not-allowed;
+}
+
+.stage-checkbox-content {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.stage-checkbox-name {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #343a40;
+}
+
+.stage-checkbox-id {
+  margin-top: 4px;
+  font-size: 9px;
+  color: #858c96;
+  letter-spacing: 0.2px;
+}
+
+/* ==================================================
+   MANDATORY BADGE
+================================================== */
+
+.mandatory-stage-badge {
+  align-self: flex-start;
+  margin-top: 7px;
+  padding: 4px 7px;
+  border-radius: 4px;
+  background: #eceff2;
+  color: #5d6570;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+/* ==================================================
+   MANDATORY NOTE
+================================================== */
+
+.mandatory-stage-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+  margin-top: 18px;
+  padding: 14px 16px;
+
+  border: 1px solid #dfe3e8;
+  border-radius: 8px;
+
+  background: #f8f9fa;
+}
+
+.mandatory-stage-note-icon {
+  flex: 0 0 22px;
+
+  width: 22px;
+  height: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #e4e7eb;
+  color: #5f6772;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.mandatory-stage-note strong {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  color: #3f4650;
+}
+
+.mandatory-stage-note p {
+  margin: 5px 0 0;
+  font-size: 11px;
+  line-height: 1.55;
+  color: #737b87;
+}
+
+/* ==================================================
+   SEQUENCE
+================================================== */
+
+.sequence-card {
+  margin-bottom: 0;
+}
+
+.sequence-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sequence-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  min-height: 62px;
+  padding: 11px 13px;
+
+  border: 1px solid #dfe3e8;
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  box-sizing: border-box;
+}
+
+.sequence-item.mandatory-sequence-item {
+  background: #f7f8f9;
+  border-color: #cfd4da;
+}
+
+.sequence-number {
+  flex: 0 0 30px;
+
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 7px;
+  background: #f0f1f3;
+
+  font-size: 11px;
+  font-weight: 700;
+  color: #4d5560;
+}
+
+.sequence-stage-info {
+  flex: 1;
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.sequence-stage-info strong {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #343a40;
+}
+
+.sequence-stage-info > span {
+  margin-top: 3px;
+  font-size: 9px;
+  color: #858c96;
+}
+
+.sequence-mandatory-label {
+  margin-top: 6px !important;
+  color: #626a74 !important;
+  font-weight: 600;
+}
+
+.sequence-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sequence-move-button {
+  width: 29px;
+  height: 29px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #d7dce2;
+  border-radius: 6px;
+
+  background: #ffffff;
+  color: #4c5560;
+
+  font-size: 14px;
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.sequence-move-button:hover:not(:disabled) {
+  background: #f3f4f6;
+}
+
+.sequence-move-button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.sequence-locked-icon {
+  width: 29px;
+  height: 29px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 6px;
+  background: #eceff2;
+
+  font-size: 11px;
+}
+
+/* ==================================================
+   EMPTY STATE
+================================================== */
+
+.sequence-empty-state {
+  padding: 35px 20px;
+  text-align: center;
+  border: 1px dashed #d9dde2;
+  border-radius: 8px;
+  background: #fafbfc;
+}
+
+.sequence-empty-state h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.sequence-empty-state p {
+  margin: 7px 0 0;
+  font-size: 11px;
+  color: #737b87;
+}
+
+/* ==================================================
+   ACTIONS
+================================================== */
+
+.technical-stage-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+
+  margin-top: 22px;
+}
+
+.technical-stage-cancel-button,
+.technical-stage-save-button {
+  min-width: 105px;
+  padding: 10px 16px;
+
+  border-radius: 7px;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.technical-stage-cancel-button {
+  border: 1px solid #d8dde5;
+  background: #ffffff;
+  color: #343a40;
+}
+
+.technical-stage-cancel-button:hover:not(:disabled) {
+  background: #f5f6f8;
+}
+
+.technical-stage-save-area {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.technical-stage-save-button {
+  border: 1px solid #1f2937;
+  background: #1f2937;
+  color: #ffffff;
+}
+
+.technical-stage-save-button:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.technical-stage-cancel-button:disabled,
+.technical-stage-save-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ==================================================
+   SAVE POPUP
+================================================== */
+
+.technical-stage-popup-overlay {
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(0, 0, 0, 0.42);
+
+  z-index: 1000;
+}
+
+.technical-stage-popup {
+  width: min(400px, 100%);
+
+  padding: 25px;
+
+  background: #ffffff;
+  border-radius: 10px;
+
+  text-align: center;
+
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
+  box-sizing: border-box;
+}
+
+.technical-stage-popup-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 14px;
+
+  border-radius: 50%;
+  background: #e9f7ef;
+  color: #26734d;
+
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.technical-stage-popup h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.technical-stage-popup p {
+  margin: 9px 0 0;
+
+  font-size: 12px;
+  line-height: 1.5;
+  color: #68717d;
+}
+
+.technical-stage-popup-button {
+  min-width: 75px;
+  margin-top: 20px;
+
+  padding: 9px 16px;
+
+  border: 0;
+  border-radius: 7px;
+
+  background: #1f2937;
+  color: #ffffff;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+/* ==================================================
+   RESPONSIVE — 1100
+================================================== */
+
+@media (max-width: 1100px) {
+  .technical-stage-page {
+    padding: 24px;
+  }
+
+  .stage-checkbox-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ==================================================
+   RESPONSIVE — 800
+================================================== */
+
+@media (max-width: 800px) {
+  .technical-stage-page {
+    padding: 20px;
+  }
+
+  .selected-product-info {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .stage-checkbox-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==================================================
+   RESPONSIVE — 600
+================================================== */
+
+@media (max-width: 600px) {
+  .technical-stage-page {
+    padding: 16px;
+  }
+
+  .technical-stage-header {
+    flex-direction: column;
+  }
+
+  .technical-stage-header h1 {
+    font-size: 21px;
+  }
+
+  .technical-stage-back-button {
+    align-self: flex-start;
+  }
+
+  .technical-stage-card-title {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .technical-stage-card-body {
+    padding: 16px;
+  }
+
+  .selected-product-info {
+    grid-template-columns: 1fr;
+  }
+
+  .technical-stage-actions {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .technical-stage-cancel-button,
+  .technical-stage-save-button {
+    width: 100%;
+  }
+
+  .technical-stage-save-area {
+    width: 100%;
+  }
+
+  .technical-stage-save-button {
+    width: 100%;
+  }
+
+  .sequence-item {
+    gap: 10px;
+  }
+}
+
+/* ==================================================
+   RESPONSIVE — 480
+================================================== */
+
+@media (max-width: 480px) {
+  .technical-stage-page {
+    padding: 14px;
+  }
+
+  .technical-stage-header h1 {
+    font-size: 20px;
+  }
+
+  .mandatory-stage-note {
+    padding: 12px;
+  }
+
+  .sequence-stage-info strong {
+    font-size: 11px;
+  }
+
+  .sequence-actions {
+    gap: 4px;
+  }
+
+  .sequence-move-button,
+  .sequence-locked-icon {
+    width: 27px;
+    height: 27px;
+  }
+}
+/* ==================================================
+   MANDATORY FINAL BATCH SHEET
+================================================== */
+
+.mandatory-stage-item {
+  cursor: not-allowed;
+  border-color: #d9dde3;
+  background: #f7f8f9;
+}
+
+.mandatory-stage-item input {
+  cursor: not-allowed;
+}
+
+.mandatory-stage-note {
+  display: block;
+  margin-top: 5px;
+  font-size: 10px;
+  font-weight: 600;
+  color: #6b7280;
+}
+
+.mandatory-stage-information {
+  margin-top: 18px;
+  padding: 12px 14px;
+  border: 1px solid #e1e4e8;
+  border-radius: 7px;
+  background: #f8f9fa;
+  font-size: 11px;
+  line-height: 1.55;
+  color: #5f6670;
+}
+
+.mandatory-stage-information strong {
+  font-weight: 700;
+  color: #3f4650;
+}
+
+/* ==================================================
+   MANDATORY FINAL SEQUENCE ITEM
+================================================== */
+
+.mandatory-sequence-item {
+  border-color: #d9dde3;
+  background: #f8f9fa;
+}
+
+.mandatory-sequence-note {
+  display: block;
+  margin-top: 5px;
+  font-size: 10px;
+  font-weight: 600;
+  color: #6b7280;
+}
+
+.sequence-locked-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 6px 9px;
+
+  border-radius: 6px;
+  background: #eef0f2;
+
+  font-size: 10px;
+  font-weight: 600;
+  color: #6b7179;
+  white-space: nowrap;
+}
+
+/* ==================================================
+   FINAL PAGE THEME / LAYOUT OVERRIDES
+   Matches Technical Reactors page
+   ================================================== */
+
+.technical-stage-page {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Page title */
+.technical-stage-header h1 {
+  margin: 0;
+  color: var(--color-primary) !important;
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+/* Card headings */
+.technical-stage-card-title h2 {
+  color: var(--color-text) !important;
+}
+
+/* Product section must occupy the complete card width */
+.technical-stage-field {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+.technical-stage-field label {
+  color: var(--color-text-secondary) !important;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.technical-stage-field select {
+  display: block;
+  width: 100% !important;
+  max-width: none !important;
+  height: 42px;
+  box-sizing: border-box;
+  padding: 10px 11px;
+  border: 1px solid var(--color-border-light);
+  border-radius: 7px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-family: inherit;
+  font-size: 12px;
+  outline: none;
+}
+
+.technical-stage-field select:focus {
+  border-color: var(--color-primary);
+}
+
+/* Checkboxes use exactly the same primary/sidebar theme variable */
+.stage-checkbox-item input {
+  accent-color: var(--color-primary) !important;
+}
+
+/* Selected stage uses a very light version of the same theme */
+.stage-checkbox-item.selected {
+  border-color: #c8d5df;
+  background: #f5f8fa;
+}
+
+/* Primary buttons use the same color as other pages */
+.technical-stage-save-button {
+  border: none;
+  background: var(--color-primary) !important;
+  color: #ffffff;
+}
+
+.technical-stage-save-button:hover:not(:disabled) {
+  background: var(--color-primary-dark) !important;
+}
+
+.technical-stage-popup-button {
+  background: var(--color-primary) !important;
+  color: #ffffff;
+}
+
+/* Same responsive container behavior as Technical Reactors */
+@media (max-width: 1100px) {
+  .technical-stage-page {
+    max-width: none;
+    padding: 0;
+  }
+}

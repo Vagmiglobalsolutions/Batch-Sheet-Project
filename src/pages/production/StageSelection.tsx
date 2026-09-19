@@ -60,6 +60,16 @@ interface StageSelectionLocationState {
    * product-specific stage sequence.
    */
   stageStatuses?: StageStatusData[];
+
+  /*
+   * This value is only a frontend/backend-ready indication
+   * that all configured stages have been completed and
+   * approved by QA/QC.
+   *
+   * The backend must perform the final verification before
+   * allowing final batch-sheet generation.
+   */
+  allStagesCompleted?: boolean;
 }
 
 const stages: Stage[] = [
@@ -109,7 +119,10 @@ const StageSelection = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const [showCompletionConfirmation, setShowCompletionConfirmation] =
+  const [showFinalBatchConfirmation, setShowFinalBatchConfirmation] =
+    useState(false);
+
+  const [isGeneratingFinalBatch, setIsGeneratingFinalBatch] =
     useState(false);
 
   const state =
@@ -127,10 +140,10 @@ const StageSelection = () => {
 
   /*
    * ---------------------------------------------------------
-   * TEMPORARY FRONTEND FALLBACK
+   * STAGE STATUS
    * ---------------------------------------------------------
    *
-   * Until the backend is connected:
+   * Temporary frontend behavior:
    *
    * - Reaction is available.
    * - All other stages are locked.
@@ -246,6 +259,102 @@ const StageSelection = () => {
       default:
         return "🔒";
     }
+  };
+
+  /*
+   * ---------------------------------------------------------
+   * FINAL BATCH SHEET
+   * ---------------------------------------------------------
+   *
+   * For now this is controlled by the frontend state.
+   *
+   * Later the backend will determine this by checking:
+   *
+   * - Technical Team configured stages
+   * - Required stages
+   * - Completed stages
+   * - QA/QC approvals
+   *
+   * IMPORTANT:
+   * Generate Final Batch Sheet for Admin is NOT treated
+   * as a normal production process stage.
+   *
+   * It is the final action after the production stages.
+   */
+
+  const hasExplicitCompletionStatus =
+    typeof state?.allStagesCompleted === "boolean";
+
+  const allStagesCompleted = hasExplicitCompletionStatus
+    ? state?.allStagesCompleted === true
+    : stageStatuses.length > 0 &&
+      stageStatuses.every(
+        (stageStatus) => stageStatus.status === "APPROVED"
+      );
+
+  /*
+   * The final batch-sheet action can only be used after
+   * all configured production stages are completed and
+   * QA/QC approved.
+   */
+  const canGenerateFinalBatch = allStagesCompleted;
+
+  const handleGenerateFinalBatchSheet = () => {
+    if (!canGenerateFinalBatch || isGeneratingFinalBatch) {
+      return;
+    }
+
+    setShowFinalBatchConfirmation(true);
+  };
+
+  const handleCancelFinalBatchConfirmation = () => {
+    if (isGeneratingFinalBatch) {
+      return;
+    }
+
+    setShowFinalBatchConfirmation(false);
+  };
+
+  const handleConfirmFinalBatchGeneration = async () => {
+    if (!canGenerateFinalBatch) {
+      return;
+    }
+
+    setIsGeneratingFinalBatch(true);
+
+    /*
+     * FRONTEND DEMO ONLY
+     *
+     * Later this will become the backend API request.
+     *
+     * Backend must:
+     *
+     * 1. Verify the selected product.
+     * 2. Get the Technical Team configured stages.
+     * 3. Verify every required/configured stage is completed.
+     * 4. Verify every required/configured stage has QA approval.
+     * 5. Verify the correct production flow and lot numbers.
+     * 6. Generate the final Batch Number.
+     * 7. Consolidate the complete batch history.
+     * 8. Preserve repeated stages.
+     * 9. Preserve optional-stage decisions.
+     * 10. Make the final Batch Sheet available to Admin.
+     * 11. Create the Admin "Final Batch Sheet Ready"
+     *     notification.
+     *
+     * Production does NOT enter or create the Batch Number.
+     */
+
+    await new Promise((resolve) => setTimeout(resolve, 800));
+
+    setIsGeneratingFinalBatch(false);
+    setShowFinalBatchConfirmation(false);
+
+    /*
+     * Frontend demonstration:
+     * return to Production Dashboard.
+     */
+    navigate("/production");
   };
 
   return (
@@ -415,30 +524,99 @@ const StageSelection = () => {
             );
           })}
         </div>
+
+        {/* =========================
+            FINAL BATCH SHEET FOR ADMIN
+        ========================= */}
+
+        <div
+          className={`final-batch-section ${
+            allStagesCompleted
+              ? "final-batch-available"
+              : "final-batch-locked"
+          }`}
+        >
+          <div className="final-batch-icon">
+            {allStagesCompleted ? "✓" : "🔒"}
+          </div>
+
+          <div className="final-batch-content">
+            <h2>Generate Final Batch Sheet for Admin</h2>
+
+            {allStagesCompleted ? (
+              <>
+                <p>
+                  All configured production stages have been completed and
+                  approved by QA/QC.
+                </p>
+
+                <p className="final-batch-note">
+                  Generate the Final Batch Sheet to complete this production
+                  process and make the completed batch sheet available to
+                  Admin.
+                </p>
+
+                <button
+                  type="button"
+                  className="generate-final-batch-button"
+                  onClick={handleGenerateFinalBatchSheet}
+                  disabled={isGeneratingFinalBatch}
+                >
+                  {isGeneratingFinalBatch
+                    ? "Generating Final Batch Sheet..."
+                    : "Generate Final Batch Sheet for Admin"}
+                </button>
+              </>
+            ) : (
+              <>
+                <p>
+                  This final action will become available after all configured
+                  production stages are completed and approved by QA/QC.
+                </p>
+
+                <p className="final-batch-note">
+                  The Final Batch Sheet cannot be generated while any required
+                  stage is still pending.
+                </p>
+
+                <button
+                  type="button"
+                  className="generate-final-batch-button locked"
+                  disabled
+                >
+                  Locked — Complete All Stages First
+                </button>
+              </>
+            )}
+          </div>
+        </div>
       </div>
 
       {/* =========================
-          COMPLETION CONFIRMATION
+          FINAL BATCH CONFIRMATION
       ========================= */}
 
-      {showCompletionConfirmation && (
+      {showFinalBatchConfirmation && (
         <div className="stage-confirmation-overlay">
           <div className="stage-confirmation-modal">
-            <h2>Confirm Completion</h2>
+            <h2>Generate Final Batch Sheet for Admin</h2>
 
             <p>
-              Are you sure you want to complete this production process?
+              All configured production stages have been completed and
+              approved by QA/QC.
             </p>
 
             <p className="stage-confirmation-warning">
-              Once submitted, it cannot be edited.
+              Once the Final Batch Sheet is generated, this production
+              process cannot be edited through normal stage progression.
             </p>
 
             <div className="stage-confirmation-actions">
               <button
                 type="button"
                 className="stage-confirmation-cancel"
-                onClick={() => setShowCompletionConfirmation(false)}
+                onClick={handleCancelFinalBatchConfirmation}
+                disabled={isGeneratingFinalBatch}
               >
                 Cancel
               </button>
@@ -446,12 +624,10 @@ const StageSelection = () => {
               <button
                 type="button"
                 className="stage-confirmation-submit"
-                onClick={() => {
-                  setShowCompletionConfirmation(false);
-                  navigate("/production/dashboard");
-                }}
+                onClick={handleConfirmFinalBatchGeneration}
+                disabled={isGeneratingFinalBatch}
               >
-                Submit
+                {isGeneratingFinalBatch ? "Generating..." : "Generate"}
               </button>
             </div>
           </div>

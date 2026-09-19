@@ -1,8 +1,8 @@
 /* =========================================
-   PRODUCTION LAYOUT
+   TECHNICAL LAYOUT
 ========================================= */
 
-.production-layout {
+.technical-layout {
   width: 100%;
   height: 100vh;
   background: var(--color-background);
@@ -204,7 +204,7 @@
    BODY
 ========================================= */
 
-.production-body {
+.technical-body {
   display: flex;
 
   width: 100%;
@@ -226,9 +226,12 @@
    MAIN CONTENT
 ========================================= */
 
-.production-content {
+.technical-content {
   flex: 1;
 
+  /*
+    Sidebar occupies this width on desktop.
+  */
   margin-left: var(--sidebar-width);
 
   min-width: 0;
@@ -274,21 +277,22 @@
     gap: 12px;
   }
 
-  .production-content {
+  .technical-content {
     padding: 22px;
   }
 }
 
 
-/* ========================================
+/* =========================================
    MOBILE
 ========================================= */
 
 @media (max-width: 768px) {
 
-  .production-content {
+  .technical-content {
     margin-left: 0;
   }
+
 
   /* -------------------------
      HEADER
@@ -416,7 +420,7 @@
      BODY
   ------------------------- */
 
-  .production-body {
+  .technical-body {
     height: calc(100vh - 64px);
 
     margin-top: 64px;
@@ -433,7 +437,7 @@
      CONTENT
   ------------------------- */
 
-  .production-content {
+  .technical-content {
     width: 100%;
 
     min-width: 0;
@@ -513,7 +517,7 @@
     font-size: 9px;
   }
 
-  .production-content {
+  .technical-content {
     padding: 16px 12px;
   }
 }

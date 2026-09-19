@@ -1,0 +1,501 @@
+.admin-pending-stock {
+  width: 100%;
+  padding-bottom: 30px;
+}
+
+.admin-pending-stock-header {
+  margin-bottom: 22px;
+}
+
+.admin-pending-stock-header h1 {
+  margin: 0 0 6px;
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 700;
+  color: var(--color-primary, #1f2937);
+}
+
+.admin-pending-stock-header p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--color-muted, #6b7280);
+}
+
+/* ==================================================
+   MAIN CARD
+================================================== */
+
+.pending-stock-card {
+  width: 100%;
+  background: var(--color-surface, #ffffff);
+  border: 1px solid var(--color-border-light, #e5e7eb);
+  border-radius: 10px;
+  box-shadow: var(
+    --shadow-sm,
+    0 2px 8px rgba(15, 23, 42, 0.06)
+  );
+  overflow: hidden;
+}
+
+.pending-stock-card-header {
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--color-border-light, #e5e7eb);
+}
+
+.pending-stock-card-header h2 {
+  margin: 0 0 5px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-primary, #1f2937);
+}
+
+.pending-stock-card-header p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--color-muted, #6b7280);
+}
+
+/* ==================================================
+   FILTERS
+================================================== */
+
+.pending-stock-filters {
+  display: grid;
+  grid-template-columns: minmax(260px, 1.5fr)
+    minmax(190px, 1fr)
+    auto;
+  gap: 14px;
+  align-items: end;
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--color-border-light, #e5e7eb);
+}
+
+.pending-stock-field {
+  min-width: 0;
+}
+
+.pending-stock-field label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text, #374151);
+}
+
+.pending-stock-field input,
+.pending-stock-field select {
+  width: 100%;
+  min-height: 38px;
+  padding: 8px 11px;
+  font-family: inherit;
+  font-size: 12px;
+  color: var(--color-text, #374151);
+  background: var(--color-surface, #ffffff);
+  border: 1px solid var(--color-border-light, #d1d5db);
+  border-radius: 7px;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.pending-stock-field input::placeholder {
+  color: var(--color-muted, #9ca3af);
+}
+
+.pending-stock-field input:focus,
+.pending-stock-field select:focus {
+  border-color: var(--color-primary, #1f2937);
+  box-shadow: 0 0 0 2px rgba(31, 41, 55, 0.08);
+}
+
+.pending-stock-filter-action {
+  display: flex;
+  align-items: flex-end;
+}
+
+.pending-stock-clear-button {
+  min-height: 38px;
+  padding: 8px 17px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text, #374151);
+  background: var(--color-surface, #ffffff);
+  border: 1px solid var(--color-border-light, #d1d5db);
+  border-radius: 7px;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.pending-stock-clear-button:hover {
+  background: var(--color-background, #f9fafb);
+  border-color: var(--color-primary, #1f2937);
+}
+
+/* ==================================================
+   TABLE
+================================================== */
+
+.pending-stock-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.pending-stock-table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+}
+
+.pending-stock-table th {
+  padding: 13px 16px;
+  text-align: left;
+  white-space: nowrap;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--color-text-secondary, #4b5563);
+  background: var(--color-background, #f9fafb);
+  border-bottom: 1px solid var(--color-border-light, #e5e7eb);
+}
+
+.pending-stock-table td {
+  padding: 14px 16px;
+  font-size: 12px;
+  color: var(--color-text, #374151);
+  border-bottom: 1px solid var(--color-border-light, #e5e7eb);
+  vertical-align: middle;
+}
+
+.pending-stock-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.pending-stock-table tbody tr:hover {
+  background: rgba(249, 250, 251, 0.8);
+}
+
+/* ==================================================
+   PRODUCT
+================================================== */
+
+.pending-stock-product-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.pending-stock-product-cell strong {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-primary, #1f2937);
+}
+
+.pending-stock-product-cell span {
+  font-size: 11px;
+  color: var(--color-muted, #6b7280);
+}
+
+/* ==================================================
+   BATCH NUMBER
+================================================== */
+
+.pending-stock-batch-number {
+  white-space: nowrap;
+  font-weight: 600;
+  color: var(--color-primary, #1f2937) !important;
+}
+
+/* ==================================================
+   DELETE BUTTON
+================================================== */
+
+.pending-stock-delete-button {
+  min-height: 32px;
+  padding: 6px 14px;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  color: #b91c1c;
+  background: var(--color-surface, #ffffff);
+  border: 1px solid #ef9a9a;
+  border-radius: 6px;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.pending-stock-delete-button:hover {
+  color: #ffffff;
+  background: #b91c1c;
+  border-color: #b91c1c;
+}
+
+/* ==================================================
+   EMPTY STATE
+================================================== */
+
+.pending-stock-empty-cell {
+  padding: 0 !important;
+}
+
+.pending-stock-empty-state {
+  padding: 45px 20px;
+  text-align: center;
+}
+
+.pending-stock-empty-state h3 {
+  margin: 0 0 7px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-primary, #1f2937);
+}
+
+.pending-stock-empty-state p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--color-muted, #6b7280);
+}
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+.pending-stock-table-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 12px 20px;
+  border-top: 1px solid var(--color-border-light, #e5e7eb);
+}
+
+.pending-stock-table-footer span {
+  font-size: 11px;
+  color: var(--color-muted, #6b7280);
+}
+
+/* ==================================================
+   DELETE CONFIRMATION MODAL
+================================================== */
+
+.pending-stock-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(15, 23, 42, 0.42);
+}
+
+.pending-stock-confirmation-modal {
+  width: 100%;
+  max-width: 430px;
+
+  padding: 24px;
+
+  background: var(--color-surface, #ffffff);
+  border: 1px solid var(--color-border-light, #e5e7eb);
+  border-radius: 10px;
+
+  box-shadow:
+    0 18px 45px rgba(15, 23, 42, 0.18);
+}
+
+.pending-stock-confirmation-modal h3 {
+  margin: 0 0 9px;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  color: var(--color-primary, #1f2937);
+}
+
+.pending-stock-confirmation-modal > p {
+  margin: 0;
+
+  font-size: 12px;
+  line-height: 1.6;
+
+  color: var(--color-muted, #6b7280);
+}
+
+/* ==================================================
+   DELETE DETAILS
+================================================== */
+
+.pending-stock-delete-details {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+
+  margin-top: 18px;
+  padding: 13px;
+
+  background: var(--color-background, #f9fafb);
+  border: 1px solid var(--color-border-light, #e5e7eb);
+  border-radius: 7px;
+}
+
+.pending-stock-delete-details div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.pending-stock-delete-details span {
+  font-size: 11px;
+  color: var(--color-muted, #6b7280);
+}
+
+.pending-stock-delete-details strong {
+  font-size: 12px;
+  font-weight: 600;
+  text-align: right;
+  color: var(--color-primary, #1f2937);
+}
+
+/* ==================================================
+   CONFIRMATION ACTIONS
+================================================== */
+
+.pending-stock-confirmation-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+
+  margin-top: 22px;
+}
+
+.pending-stock-cancel-button,
+.pending-stock-delete-confirm-button {
+  min-height: 36px;
+  padding: 8px 18px;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.pending-stock-cancel-button {
+  color: var(--color-text, #374151);
+  background: var(--color-surface, #ffffff);
+  border: 1px solid var(--color-border-light, #d1d5db);
+}
+
+.pending-stock-cancel-button:hover {
+  background: var(--color-background, #f9fafb);
+  border-color: var(--color-primary, #1f2937);
+}
+
+.pending-stock-delete-confirm-button {
+  color: #ffffff;
+  background: #b91c1c;
+  border: 1px solid #b91c1c;
+}
+
+.pending-stock-delete-confirm-button:hover {
+  background: #991b1b;
+  border-color: #991b1b;
+}
+
+.pending-stock-cancel-button:disabled,
+.pending-stock-delete-confirm-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+
+@media (max-width: 900px) {
+  .pending-stock-filters {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .pending-stock-filter-action {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 650px) {
+  .admin-pending-stock-header h1 {
+    font-size: 21px;
+  }
+
+  .pending-stock-card-header {
+    padding: 16px;
+  }
+
+  .pending-stock-filters {
+    grid-template-columns: 1fr;
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .pending-stock-filter-action {
+    width: 100%;
+  }
+
+  .pending-stock-clear-button {
+    width: 100%;
+  }
+
+  .pending-stock-table {
+    min-width: 700px;
+  }
+
+  .pending-stock-table th,
+  .pending-stock-table td {
+    padding: 11px 12px;
+  }
+
+  .pending-stock-table-footer {
+    justify-content: flex-start;
+    padding: 11px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pending-stock-modal-overlay {
+    padding: 14px;
+  }
+
+  .pending-stock-confirmation-modal {
+    padding: 20px;
+  }
+
+  .pending-stock-confirmation-actions {
+    flex-direction: column-reverse;
+  }
+
+  .pending-stock-cancel-button,
+  .pending-stock-delete-confirm-button {
+    width: 100%;
+  }
+
+  .pending-stock-delete-details div {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .pending-stock-delete-details strong {
+    text-align: left;
+  }
+}

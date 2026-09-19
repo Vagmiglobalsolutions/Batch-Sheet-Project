@@ -1,0 +1,506 @@
+.stock-left-page {
+  width: 100%;
+  padding: 0 0 40px;
+  color: #102f51;
+}
+
+.stock-left-header {
+  margin-bottom: 28px;
+}
+
+.stock-left-header h1 {
+  margin: 0 0 8px;
+  font-size: 32px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #102f51;
+}
+
+.stock-left-header p {
+  margin: 0;
+  font-size: 14px;
+  color: #60758d;
+}
+
+/* Cards */
+
+.stock-left-card {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #e0e5eb;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(16, 47, 81, 0.07);
+  overflow: hidden;
+}
+
+.stock-left-history-card {
+  margin-top: 24px;
+}
+
+.stock-left-card-header {
+  padding: 24px 28px;
+  border-bottom: 1px solid #e1e6eb;
+}
+
+.stock-left-card-header h2 {
+  margin: 0 0 6px;
+  font-size: 21px;
+  font-weight: 700;
+  color: #102f51;
+}
+
+.stock-left-card-header p {
+  margin: 0;
+  font-size: 13px;
+  color: #667b91;
+}
+
+/* Form */
+
+.stock-left-form {
+  padding: 28px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px 24px;
+}
+
+.stock-left-field {
+  min-width: 0;
+}
+
+.stock-left-field-full {
+  grid-column: 1 / -1;
+}
+
+.stock-left-field label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #173b61;
+}
+
+.stock-left-field label span {
+  color: #c62828;
+}
+
+.stock-left-field input,
+.stock-left-field select {
+  width: 100%;
+  height: 43px;
+  padding: 0 13px;
+  border: 1px solid #ccd5df;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #173b61;
+  font-family: inherit;
+  font-size: 13px;
+  outline: none;
+  box-sizing: border-box;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.stock-left-field input::placeholder {
+  color: #9aa8b7;
+}
+
+.stock-left-field input:focus,
+.stock-left-field select:focus {
+  border-color: #1b5b91;
+  box-shadow: 0 0 0 3px rgba(27, 91, 145, 0.08);
+}
+
+.stock-left-input-error {
+  border-color: #c62828 !important;
+}
+
+.stock-left-error {
+  margin-top: 6px;
+  font-size: 11px;
+  color: #c62828;
+}
+
+/* Automatically Derived Details */
+
+.stock-left-selected-record {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  padding: 17px;
+  border: 1px solid #dce5ed;
+  border-radius: 8px;
+  background: #f7f9fb;
+}
+
+.stock-left-selected-item {
+  min-width: 0;
+}
+
+.stock-left-selected-item span {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #6d8195;
+}
+
+.stock-left-selected-item strong {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #173b61;
+  word-break: break-word;
+}
+
+/* Actions */
+
+.stock-left-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 20px 28px;
+  border-top: 1px solid #e1e6eb;
+  background: #fbfcfd;
+}
+
+.stock-left-btn {
+  min-width: 92px;
+  height: 38px;
+  padding: 0 18px;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.1s ease;
+}
+
+.stock-left-btn:active {
+  transform: translateY(1px);
+}
+
+.stock-left-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.stock-left-btn-primary {
+  border: 1px solid #123f68;
+  background: #123f68;
+  color: #ffffff;
+}
+
+.stock-left-btn-primary:hover:not(:disabled) {
+  background: #0d3152;
+  border-color: #0d3152;
+}
+
+.stock-left-btn-secondary {
+  border: 1px solid #cbd5df;
+  background: #ffffff;
+  color: #244563;
+}
+
+.stock-left-btn-secondary:hover:not(:disabled) {
+  background: #f3f6f8;
+}
+
+/* History Table */
+
+.stock-left-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.stock-left-table {
+  width: 100%;
+  min-width: 1100px;
+  border-collapse: collapse;
+}
+
+.stock-left-table th {
+  height: 56px;
+  padding: 0 20px;
+  text-align: left;
+  background: #f7f9fb;
+  border-bottom: 1px solid #dfe5eb;
+  color: #5f748a;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.stock-left-table td {
+  height: 70px;
+  padding: 0 20px;
+  border-bottom: 1px solid #e5e9ed;
+  color: #173b61;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.stock-left-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.stock-left-table tbody tr:hover {
+  background: #fafcfd;
+}
+
+/* Status */
+
+.stock-left-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 72px;
+  height: 30px;
+  padding: 0 12px;
+  border-radius: 16px;
+  background: #eaf3fa;
+  color: #07548c;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* Delete */
+
+.stock-left-delete-btn {
+  height: 32px;
+  padding: 0 13px;
+  border: 1px solid #d6a0a0;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #b3261e;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.stock-left-delete-btn:hover {
+  background: #fff4f3;
+  border-color: #c62828;
+}
+
+.stock-left-delete-confirm-btn {
+  border: 1px solid #c62828;
+  background: #c62828;
+  color: #ffffff;
+}
+
+.stock-left-delete-confirm-btn:hover:not(:disabled) {
+  background: #a91f19;
+  border-color: #a91f19;
+}
+
+/* Empty */
+
+.stock-left-empty {
+  height: 100px !important;
+  text-align: center;
+  color: #718398 !important;
+}
+
+/* Confirmation Modal */
+
+.stock-left-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(10, 27, 45, 0.42);
+}
+
+.stock-left-confirmation-modal {
+  width: min(430px, 100%);
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 18px 50px rgba(16, 47, 81, 0.22);
+  padding: 26px;
+  text-align: center;
+}
+
+.stock-left-confirmation-modal h3 {
+  margin: 0 0 12px;
+  color: #102f51;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.stock-left-confirmation-modal p {
+  margin: 0;
+  color: #61758a;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* Delete Details */
+
+.stock-left-delete-details {
+  margin-top: 20px;
+  padding: 14px;
+  border: 1px solid #e1e6eb;
+  border-radius: 7px;
+  background: #f8fafc;
+  text-align: left;
+}
+
+.stock-left-delete-details div {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 6px 0;
+}
+
+.stock-left-delete-details span {
+  font-size: 11px;
+  color: #718398;
+}
+
+.stock-left-delete-details strong {
+  font-size: 11px;
+  font-weight: 600;
+  color: #173b61;
+  text-align: right;
+}
+
+.stock-left-confirmation-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+/* 1100px */
+
+@media (max-width: 1100px) {
+  .stock-left-header h1 {
+    font-size: 28px;
+  }
+
+  .stock-left-form {
+    padding: 24px;
+  }
+
+  .stock-left-card-header {
+    padding: 22px 24px;
+  }
+
+  .stock-left-actions {
+    padding: 18px 24px;
+  }
+}
+
+/* 800px */
+
+@media (max-width: 800px) {
+  .stock-left-form {
+    grid-template-columns: 1fr;
+  }
+
+  .stock-left-field-full {
+    grid-column: auto;
+  }
+
+  .stock-left-selected-record {
+    grid-column: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .stock-left-table th,
+  .stock-left-table td {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+/* 600px */
+
+@media (max-width: 600px) {
+  .stock-left-page {
+    padding-bottom: 24px;
+  }
+
+  .stock-left-header {
+    margin-bottom: 20px;
+  }
+
+  .stock-left-header h1 {
+    font-size: 24px;
+  }
+
+  .stock-left-header p {
+    font-size: 12px;
+  }
+
+  .stock-left-card-header {
+    padding: 18px;
+  }
+
+  .stock-left-card-header h2 {
+    font-size: 18px;
+  }
+
+  .stock-left-form {
+    padding: 18px;
+    gap: 18px;
+  }
+
+  .stock-left-actions {
+    padding: 16px 18px;
+  }
+
+  .stock-left-btn {
+    flex: 1;
+  }
+
+  .stock-left-confirmation-modal {
+    padding: 22px;
+  }
+}
+
+/* 480px */
+
+@media (max-width: 480px) {
+  .stock-left-header h1 {
+    font-size: 22px;
+  }
+
+  .stock-left-actions {
+    flex-direction: column-reverse;
+  }
+
+  .stock-left-btn {
+    width: 100%;
+  }
+
+  .stock-left-confirmation-actions {
+    flex-direction: column-reverse;
+  }
+
+  .stock-left-confirmation-actions .stock-left-btn {
+    width: 100%;
+  }
+
+  .stock-left-delete-details div {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .stock-left-delete-details strong {
+    text-align: left;
+  }
+}

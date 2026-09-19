@@ -68,8 +68,8 @@ const CompletedProductions = () => {
               <thead>
                 <tr>
                   <th>Product</th>
-                  <th>Current Stage</th>
-                  <th>Current Stage Lot No.</th>
+                  <th>Last Stage</th>
+                  <th>Last Stage Lot No.</th>
                   <th>Completed Date</th>
                   <th>Status</th>
                 </tr>

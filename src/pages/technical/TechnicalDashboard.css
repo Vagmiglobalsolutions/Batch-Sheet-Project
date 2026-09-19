@@ -1,0 +1,547 @@
+.technical-dashboard-page {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+
+/* ==================================================
+   PAGE HEADER
+================================================== */
+
+.technical-dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.technical-dashboard-header h1 {
+  margin: 0;
+  color: var(--color-primary);
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.technical-dashboard-header p {
+  margin: 7px 0 0;
+  max-width: 760px;
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+/* ==================================================
+   DASHBOARD STATS
+================================================== */
+
+.technical-dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.technical-stat-card {
+  min-width: 0;
+  padding: 19px 20px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.technical-stat-label {
+  display: block;
+  color: var(--color-text-secondary);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.technical-stat-value {
+  display: block;
+  margin-top: 8px;
+  color: var(--color-primary);
+  font-size: 27px;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.technical-stat-description {
+  display: block;
+  margin-top: 9px;
+  color: var(--color-text-muted);
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+
+/* ==================================================
+   COMMON SECTION
+================================================== */
+
+.technical-section {
+  width: 100%;
+  margin-bottom: 24px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.technical-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 19px 20px;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.technical-section-header h2 {
+  margin: 0;
+  color: var(--color-text);
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.technical-section-header p {
+  margin: 5px 0 0;
+  color: var(--color-text-muted);
+  font-size: 12px;
+}
+
+
+/* ==================================================
+   QUICK ACCESS
+================================================== */
+
+.technical-quick-access-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  padding: 20px;
+}
+
+.technical-quick-card {
+  position: relative;
+  min-width: 0;
+  min-height: 145px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 17px;
+  box-sizing: border-box;
+  text-align: left;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  border-radius: 8px;
+  cursor: pointer;
+  transition:
+    transform 0.15s ease,
+    border-color 0.15s ease,
+    box-shadow 0.15s ease,
+    background 0.15s ease;
+}
+
+.technical-quick-card:hover {
+  transform: translateY(-2px);
+  border-color: #c6ccd5;
+  background: #fafbfc;
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.06);
+}
+
+.technical-quick-card:active {
+  transform: translateY(0);
+}
+
+.technical-quick-number {
+  width: 29px;
+  height: 29px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #f0f1f3;
+  color: #59616d;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.technical-quick-content {
+  min-width: 0;
+  margin-top: 17px;
+  padding-right: 24px;
+}
+
+.technical-quick-content h3 {
+  margin: 0 0 6px;
+  color: var(--color-text);
+  font-size: 14px;
+  line-height: 1.35;
+  font-weight: 700;
+}
+
+.technical-quick-content p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.technical-quick-arrow {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  color: var(--color-primary);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+
+/* ==================================================
+   VIEW ALL BUTTON
+================================================== */
+
+.technical-view-all-button {
+  flex-shrink: 0;
+  border: 1px solid var(--color-border-light);
+  border-radius: 7px;
+  padding: 9px 14px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.technical-view-all-button:hover {
+  background: #f8fafc;
+}
+
+
+/* ==================================================
+   PRODUCT CONFIGURATION TABLE
+================================================== */
+
+.technical-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.technical-table {
+  width: 100%;
+  min-width: 850px;
+  border-collapse: collapse;
+}
+
+.technical-table th,
+.technical-table td {
+  padding: 14px 18px;
+  text-align: left;
+  border-bottom: 1px solid var(--color-border-light);
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.technical-table th {
+  background: #f8fafc;
+  color: var(--color-text-secondary);
+  font-weight: 600;
+}
+
+.technical-table td {
+  color: var(--color-text);
+}
+
+.technical-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.technical-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.technical-product-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.technical-product-cell strong {
+  color: var(--color-text);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.technical-product-cell span {
+  color: var(--color-text-muted);
+  font-size: 11px;
+}
+
+
+/* ==================================================
+   CONFIGURATION STATUS
+================================================== */
+
+.technical-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.technical-status.configured {
+  background: #e8f6ef;
+  color: #198754;
+}
+
+.technical-status.partial {
+  background: #fff5df;
+  color: #9a6700;
+}
+
+.technical-status.pending {
+  background: #f0f1f3;
+  color: #6b7280;
+}
+
+
+/* ==================================================
+   RECENT UPDATES
+================================================== */
+
+.technical-update-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.technical-update-item {
+  display: flex;
+  gap: 14px;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.technical-update-item:last-child {
+  border-bottom: none;
+}
+
+.technical-update-indicator {
+  width: 31px;
+  height: 31px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #e8f6ef;
+  color: #198754;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.technical-update-content {
+  min-width: 0;
+  flex: 1;
+}
+
+.technical-update-content h3 {
+  margin: 0;
+  color: var(--color-text);
+  font-size: 13px;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+.technical-update-content p {
+  margin: 5px 0 0;
+  color: var(--color-text-secondary);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.technical-update-content span {
+  display: block;
+  margin-top: 7px;
+  color: var(--color-text-muted);
+  font-size: 10px;
+}
+
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+
+@media (max-width: 1100px) {
+
+  .technical-dashboard-page {
+    max-width: none;
+  }
+
+  .technical-dashboard-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .technical-quick-access-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+@media (max-width: 768px) {
+
+  .technical-dashboard-page {
+    width: 100%;
+  }
+
+  .technical-dashboard-header {
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+
+  .technical-dashboard-header h1 {
+    font-size: 23px;
+  }
+
+  .technical-dashboard-header p {
+    font-size: 13px;
+  }
+
+  .technical-dashboard-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .technical-stat-card {
+    padding: 16px;
+  }
+
+  .technical-stat-label {
+    font-size: 11px;
+  }
+
+  .technical-stat-value {
+    font-size: 23px;
+  }
+
+  .technical-stat-description {
+    font-size: 9px;
+  }
+
+  .technical-section {
+    margin-bottom: 20px;
+  }
+
+  .technical-section-header {
+    padding: 16px;
+  }
+
+  .technical-section-header h2 {
+    font-size: 15px;
+  }
+
+  .technical-section-header p {
+    font-size: 11px;
+  }
+
+  .technical-quick-access-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .technical-quick-card {
+    min-height: 140px;
+    padding: 15px;
+  }
+
+  .technical-table th,
+  .technical-table td {
+    padding: 12px 14px;
+    font-size: 11px;
+  }
+
+  .technical-update-item {
+    padding: 14px 16px;
+    gap: 11px;
+  }
+
+  .technical-update-indicator {
+    width: 29px;
+    height: 29px;
+    font-size: 13px;
+  }
+
+  .technical-update-content h3 {
+    font-size: 12px;
+  }
+
+  .technical-update-content p {
+    font-size: 11px;
+  }
+
+  .technical-update-content span {
+    font-size: 9px;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .technical-dashboard-header h1 {
+    font-size: 21px;
+  }
+
+  .technical-dashboard-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .technical-stat-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .technical-stat-value {
+    margin-top: 0;
+    margin-left: auto;
+  }
+
+  .technical-stat-description {
+    display: none;
+  }
+
+  .technical-section-header {
+    align-items: flex-start;
+  }
+
+  .technical-quick-access-grid {
+    grid-template-columns: 1fr;
+    padding: 14px;
+  }
+
+  .technical-quick-card {
+    min-height: 125px;
+  }
+
+  .technical-view-all-button {
+    padding: 8px 10px;
+    font-size: 10px;
+  }
+
+}
